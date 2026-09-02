@@ -1,0 +1,1634 @@
+{
+  "nodes": [
+    {
+      "id": "group_Workspace_Access",
+      "type": "group",
+      "x": 0,
+      "y": 0,
+      "width": 1240,
+      "height": 430,
+      "label": "Workspace & Access",
+      "color": "1"
+    },
+    {
+      "id": "group_Catalog_Inventory",
+      "type": "group",
+      "x": 0,
+      "y": 590,
+      "width": 1240,
+      "height": 430,
+      "label": "Catalog & Inventory",
+      "color": "2"
+    },
+    {
+      "id": "group_Orders_Kitchen",
+      "type": "group",
+      "x": 0,
+      "y": 1180,
+      "width": 1240,
+      "height": 430,
+      "label": "Orders & Kitchen",
+      "color": "3"
+    },
+    {
+      "id": "group_Payments_Transactions",
+      "type": "group",
+      "x": 0,
+      "y": 1770,
+      "width": 1240,
+      "height": 310,
+      "label": "Payments & Transactions",
+      "color": "4"
+    },
+    {
+      "id": "group_Bookings_Resources",
+      "type": "group",
+      "x": 0,
+      "y": 2240,
+      "width": 940,
+      "height": 190,
+      "label": "Bookings & Resources",
+      "color": "5"
+    },
+    {
+      "id": "group_Shifts_Cash_Management",
+      "type": "group",
+      "x": 0,
+      "y": 2590,
+      "width": 1240,
+      "height": 310,
+      "label": "Shifts & Cash Management",
+      "color": "6"
+    },
+    {
+      "id": "group_Customers_Loyalty",
+      "type": "group",
+      "x": 0,
+      "y": 3060,
+      "width": 1240,
+      "height": 310,
+      "label": "Customers & Loyalty",
+      "color": "1"
+    },
+    {
+      "id": "group_Tasks_Checklists",
+      "type": "group",
+      "x": 0,
+      "y": 3530,
+      "width": 940,
+      "height": 190,
+      "label": "Tasks & Checklists",
+      "color": "2"
+    },
+    {
+      "id": "group_Menu_Book",
+      "type": "group",
+      "x": 0,
+      "y": 3880,
+      "width": 640,
+      "height": 190,
+      "label": "Menu Book",
+      "color": "5"
+    },
+    {
+      "id": "group_Expenses",
+      "type": "group",
+      "x": 0,
+      "y": 4230,
+      "width": 640,
+      "height": 190,
+      "label": "Expenses",
+      "color": "6"
+    },
+    {
+      "id": "n_audit_logs",
+      "type": "file",
+      "file": "audit_logs.md",
+      "x": 40,
+      "y": 40,
+      "width": 260,
+      "height": 90,
+      "color": "1"
+    },
+    {
+      "id": "n_auth_attempts",
+      "type": "file",
+      "file": "auth_attempts.md",
+      "x": 340,
+      "y": 40,
+      "width": 260,
+      "height": 90,
+      "color": "1"
+    },
+    {
+      "id": "n_branches",
+      "type": "file",
+      "file": "branches.md",
+      "x": 640,
+      "y": 40,
+      "width": 260,
+      "height": 90,
+      "color": "1"
+    },
+    {
+      "id": "n_idempotency_keys",
+      "type": "file",
+      "file": "idempotency_keys.md",
+      "x": 940,
+      "y": 40,
+      "width": 260,
+      "height": 90,
+      "color": "1"
+    },
+    {
+      "id": "n_pos_devices",
+      "type": "file",
+      "file": "pos_devices.md",
+      "x": 40,
+      "y": 160,
+      "width": 260,
+      "height": 90,
+      "color": "1"
+    },
+    {
+      "id": "n_profiles",
+      "type": "file",
+      "file": "profiles.md",
+      "x": 340,
+      "y": 160,
+      "width": 260,
+      "height": 90,
+      "color": "1"
+    },
+    {
+      "id": "n_rate_limit_buckets",
+      "type": "file",
+      "file": "rate_limit_buckets.md",
+      "x": 640,
+      "y": 160,
+      "width": 260,
+      "height": 90,
+      "color": "1"
+    },
+    {
+      "id": "n_workspace_members",
+      "type": "file",
+      "file": "workspace_members.md",
+      "x": 940,
+      "y": 160,
+      "width": 260,
+      "height": 90,
+      "color": "1"
+    },
+    {
+      "id": "n_workspace_printers",
+      "type": "file",
+      "file": "workspace_printers.md",
+      "x": 40,
+      "y": 280,
+      "width": 260,
+      "height": 90,
+      "color": "1"
+    },
+    {
+      "id": "n_workspaces",
+      "type": "file",
+      "file": "workspaces.md",
+      "x": 340,
+      "y": 280,
+      "width": 260,
+      "height": 90,
+      "color": "1"
+    },
+    {
+      "id": "n_cost_items",
+      "type": "file",
+      "file": "cost_items.md",
+      "x": 40,
+      "y": 630,
+      "width": 260,
+      "height": 90,
+      "color": "2"
+    },
+    {
+      "id": "n_ingredient_movements_legacy",
+      "type": "file",
+      "file": "ingredient_movements_legacy.md",
+      "x": 340,
+      "y": 630,
+      "width": 260,
+      "height": 90,
+      "color": "2"
+    },
+    {
+      "id": "n_inventory_catalog",
+      "type": "file",
+      "file": "inventory_catalog.md",
+      "x": 640,
+      "y": 630,
+      "width": 260,
+      "height": 90,
+      "color": "2"
+    },
+    {
+      "id": "n_inventory_items",
+      "type": "file",
+      "file": "inventory_items.md",
+      "x": 940,
+      "y": 630,
+      "width": 260,
+      "height": 90,
+      "color": "2"
+    },
+    {
+      "id": "n_product_addon_groups",
+      "type": "file",
+      "file": "product_addon_groups.md",
+      "x": 40,
+      "y": 750,
+      "width": 260,
+      "height": 90,
+      "color": "2"
+    },
+    {
+      "id": "n_product_addons",
+      "type": "file",
+      "file": "product_addons.md",
+      "x": 340,
+      "y": 750,
+      "width": 260,
+      "height": 90,
+      "color": "2"
+    },
+    {
+      "id": "n_product_categories",
+      "type": "file",
+      "file": "product_categories.md",
+      "x": 640,
+      "y": 750,
+      "width": 260,
+      "height": 90,
+      "color": "2"
+    },
+    {
+      "id": "n_product_variants",
+      "type": "file",
+      "file": "product_variants.md",
+      "x": 940,
+      "y": 750,
+      "width": 260,
+      "height": 90,
+      "color": "2"
+    },
+    {
+      "id": "n_products",
+      "type": "file",
+      "file": "products.md",
+      "x": 40,
+      "y": 870,
+      "width": 260,
+      "height": 90,
+      "color": "2"
+    },
+    {
+      "id": "n_recipe_items",
+      "type": "file",
+      "file": "recipe_items.md",
+      "x": 340,
+      "y": 870,
+      "width": 260,
+      "height": 90,
+      "color": "2"
+    },
+    {
+      "id": "n_stock_movements",
+      "type": "file",
+      "file": "stock_movements.md",
+      "x": 640,
+      "y": 870,
+      "width": 260,
+      "height": 90,
+      "color": "2"
+    },
+    {
+      "id": "n_suppliers",
+      "type": "file",
+      "file": "suppliers.md",
+      "x": 940,
+      "y": 870,
+      "width": 260,
+      "height": 90,
+      "color": "2"
+    },
+    {
+      "id": "n_custom_charge_presets",
+      "type": "file",
+      "file": "custom_charge_presets.md",
+      "x": 40,
+      "y": 1220,
+      "width": 260,
+      "height": 90,
+      "color": "3"
+    },
+    {
+      "id": "n_kitchen_ticket_items",
+      "type": "file",
+      "file": "kitchen_ticket_items.md",
+      "x": 340,
+      "y": 1220,
+      "width": 260,
+      "height": 90,
+      "color": "3"
+    },
+    {
+      "id": "n_kitchen_tickets",
+      "type": "file",
+      "file": "kitchen_tickets.md",
+      "x": 640,
+      "y": 1220,
+      "width": 260,
+      "height": 90,
+      "color": "3"
+    },
+    {
+      "id": "n_order_booking_link",
+      "type": "file",
+      "file": "order_booking_link.md",
+      "x": 940,
+      "y": 1220,
+      "width": 260,
+      "height": 90,
+      "color": "3"
+    },
+    {
+      "id": "n_order_charges",
+      "type": "file",
+      "file": "order_charges.md",
+      "x": 40,
+      "y": 1340,
+      "width": 260,
+      "height": 90,
+      "color": "3"
+    },
+    {
+      "id": "n_order_item_addons",
+      "type": "file",
+      "file": "order_item_addons.md",
+      "x": 340,
+      "y": 1340,
+      "width": 260,
+      "height": 90,
+      "color": "3"
+    },
+    {
+      "id": "n_order_items",
+      "type": "file",
+      "file": "order_items.md",
+      "x": 640,
+      "y": 1340,
+      "width": 260,
+      "height": 90,
+      "color": "3"
+    },
+    {
+      "id": "n_orders",
+      "type": "file",
+      "file": "orders.md",
+      "x": 940,
+      "y": 1340,
+      "width": 260,
+      "height": 90,
+      "color": "3"
+    },
+    {
+      "id": "n_receipts",
+      "type": "file",
+      "file": "receipts.md",
+      "x": 40,
+      "y": 1460,
+      "width": 260,
+      "height": 90,
+      "color": "3"
+    },
+    {
+      "id": "n_booking_payment_transactions",
+      "type": "file",
+      "file": "booking_payment_transactions.md",
+      "x": 40,
+      "y": 1810,
+      "width": 260,
+      "height": 90,
+      "color": "4"
+    },
+    {
+      "id": "n_payment_intents",
+      "type": "file",
+      "file": "payment_intents.md",
+      "x": 340,
+      "y": 1810,
+      "width": 260,
+      "height": 90,
+      "color": "4"
+    },
+    {
+      "id": "n_payments",
+      "type": "file",
+      "file": "payments.md",
+      "x": 640,
+      "y": 1810,
+      "width": 260,
+      "height": 90,
+      "color": "4"
+    },
+    {
+      "id": "n_refunds",
+      "type": "file",
+      "file": "refunds.md",
+      "x": 940,
+      "y": 1810,
+      "width": 260,
+      "height": 90,
+      "color": "4"
+    },
+    {
+      "id": "n_transactions",
+      "type": "file",
+      "file": "transactions.md",
+      "x": 40,
+      "y": 1930,
+      "width": 260,
+      "height": 90,
+      "color": "4"
+    },
+    {
+      "id": "n_bookable_resources",
+      "type": "file",
+      "file": "bookable_resources.md",
+      "x": 40,
+      "y": 2280,
+      "width": 260,
+      "height": 90,
+      "color": "5"
+    },
+    {
+      "id": "n_bookings",
+      "type": "file",
+      "file": "bookings.md",
+      "x": 340,
+      "y": 2280,
+      "width": 260,
+      "height": 90,
+      "color": "5"
+    },
+    {
+      "id": "n_resource_blocks",
+      "type": "file",
+      "file": "resource_blocks.md",
+      "x": 640,
+      "y": 2280,
+      "width": 260,
+      "height": 90,
+      "color": "5"
+    },
+    {
+      "id": "n_cash_drawer_events",
+      "type": "file",
+      "file": "cash_drawer_events.md",
+      "x": 40,
+      "y": 2630,
+      "width": 260,
+      "height": 90,
+      "color": "6"
+    },
+    {
+      "id": "n_manager_approvals",
+      "type": "file",
+      "file": "manager_approvals.md",
+      "x": 340,
+      "y": 2630,
+      "width": 260,
+      "height": 90,
+      "color": "6"
+    },
+    {
+      "id": "n_shift_events",
+      "type": "file",
+      "file": "shift_events.md",
+      "x": 640,
+      "y": 2630,
+      "width": 260,
+      "height": 90,
+      "color": "6"
+    },
+    {
+      "id": "n_shifts",
+      "type": "file",
+      "file": "shifts.md",
+      "x": 940,
+      "y": 2630,
+      "width": 260,
+      "height": 90,
+      "color": "6"
+    },
+    {
+      "id": "n_z_reports",
+      "type": "file",
+      "file": "z_reports.md",
+      "x": 40,
+      "y": 2750,
+      "width": 260,
+      "height": 90,
+      "color": "6"
+    },
+    {
+      "id": "n_customer_points",
+      "type": "file",
+      "file": "customer_points.md",
+      "x": 40,
+      "y": 3100,
+      "width": 260,
+      "height": 90,
+      "color": "1"
+    },
+    {
+      "id": "n_customers",
+      "type": "file",
+      "file": "customers.md",
+      "x": 340,
+      "y": 3100,
+      "width": 260,
+      "height": 90,
+      "color": "1"
+    },
+    {
+      "id": "n_loyalty_rules",
+      "type": "file",
+      "file": "loyalty_rules.md",
+      "x": 640,
+      "y": 3100,
+      "width": 260,
+      "height": 90,
+      "color": "1"
+    },
+    {
+      "id": "n_voucher_redemptions",
+      "type": "file",
+      "file": "voucher_redemptions.md",
+      "x": 940,
+      "y": 3100,
+      "width": 260,
+      "height": 90,
+      "color": "1"
+    },
+    {
+      "id": "n_vouchers",
+      "type": "file",
+      "file": "vouchers.md",
+      "x": 40,
+      "y": 3220,
+      "width": 260,
+      "height": 90,
+      "color": "1"
+    },
+    {
+      "id": "n_checklist_completions",
+      "type": "file",
+      "file": "checklist_completions.md",
+      "x": 40,
+      "y": 3570,
+      "width": 260,
+      "height": 90,
+      "color": "2"
+    },
+    {
+      "id": "n_checklist_items",
+      "type": "file",
+      "file": "checklist_items.md",
+      "x": 340,
+      "y": 3570,
+      "width": 260,
+      "height": 90,
+      "color": "2"
+    },
+    {
+      "id": "n_task_checklists",
+      "type": "file",
+      "file": "task_checklists.md",
+      "x": 640,
+      "y": 3570,
+      "width": 260,
+      "height": 90,
+      "color": "2"
+    },
+    {
+      "id": "n_menu_book_hotspots",
+      "type": "file",
+      "file": "menu_book_hotspots.md",
+      "x": 40,
+      "y": 3920,
+      "width": 260,
+      "height": 90,
+      "color": "5"
+    },
+    {
+      "id": "n_menu_book_pages",
+      "type": "file",
+      "file": "menu_book_pages.md",
+      "x": 340,
+      "y": 3920,
+      "width": 260,
+      "height": 90,
+      "color": "5"
+    },
+    {
+      "id": "n_expense_categories",
+      "type": "file",
+      "file": "expense_categories.md",
+      "x": 40,
+      "y": 4270,
+      "width": 260,
+      "height": 90,
+      "color": "6"
+    },
+    {
+      "id": "n_expenses",
+      "type": "file",
+      "file": "expenses.md",
+      "x": 340,
+      "y": 4270,
+      "width": 260,
+      "height": 90,
+      "color": "6"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e_960d257456",
+      "fromNode": "n_audit_logs",
+      "fromSide": "bottom",
+      "toNode": "n_workspaces",
+      "toSide": "top",
+      "label": "workspace_id"
+    },
+    {
+      "id": "e_1b6581c78b",
+      "fromNode": "n_bookable_resources",
+      "fromSide": "bottom",
+      "toNode": "n_branches",
+      "toSide": "top",
+      "label": "branch_id"
+    },
+    {
+      "id": "e_b0abdf3316",
+      "fromNode": "n_bookable_resources",
+      "fromSide": "bottom",
+      "toNode": "n_workspaces",
+      "toSide": "top",
+      "label": "workspace_id"
+    },
+    {
+      "id": "e_d1a4ebe6c9",
+      "fromNode": "n_booking_payment_transactions",
+      "fromSide": "bottom",
+      "toNode": "n_bookings",
+      "toSide": "top",
+      "label": "booking_id"
+    },
+    {
+      "id": "e_d6711e693a",
+      "fromNode": "n_booking_payment_transactions",
+      "fromSide": "bottom",
+      "toNode": "n_workspaces",
+      "toSide": "top",
+      "label": "workspace_id"
+    },
+    {
+      "id": "e_48d0d0e9d2",
+      "fromNode": "n_bookings",
+      "fromSide": "bottom",
+      "toNode": "n_branches",
+      "toSide": "top",
+      "label": "branch_id"
+    },
+    {
+      "id": "e_b3748aa954",
+      "fromNode": "n_bookings",
+      "fromSide": "bottom",
+      "toNode": "n_customers",
+      "toSide": "top",
+      "label": "customer_id"
+    },
+    {
+      "id": "e_5d60ebff66",
+      "fromNode": "n_bookings",
+      "fromSide": "bottom",
+      "toNode": "n_bookings",
+      "toSide": "top",
+      "label": "rescheduled_from_booking_id (self)"
+    },
+    {
+      "id": "e_2b0ccca400",
+      "fromNode": "n_bookings",
+      "fromSide": "bottom",
+      "toNode": "n_bookings",
+      "toSide": "top",
+      "label": "rescheduled_to_booking_id (self)"
+    },
+    {
+      "id": "e_fca1ea3f08",
+      "fromNode": "n_bookings",
+      "fromSide": "bottom",
+      "toNode": "n_bookable_resources",
+      "toSide": "top",
+      "label": "resource_id"
+    },
+    {
+      "id": "e_4122a658fa",
+      "fromNode": "n_bookings",
+      "fromSide": "bottom",
+      "toNode": "n_vouchers",
+      "toSide": "top",
+      "label": "voucher_id"
+    },
+    {
+      "id": "e_0db10116db",
+      "fromNode": "n_bookings",
+      "fromSide": "bottom",
+      "toNode": "n_workspaces",
+      "toSide": "top",
+      "label": "workspace_id"
+    },
+    {
+      "id": "e_0ec9739968",
+      "fromNode": "n_branches",
+      "fromSide": "bottom",
+      "toNode": "n_workspaces",
+      "toSide": "top",
+      "label": "workspace_id"
+    },
+    {
+      "id": "e_afaf8f1f30",
+      "fromNode": "n_cash_drawer_events",
+      "fromSide": "bottom",
+      "toNode": "n_branches",
+      "toSide": "top",
+      "label": "branch_id"
+    },
+    {
+      "id": "e_24900b3ca5",
+      "fromNode": "n_cash_drawer_events",
+      "fromSide": "bottom",
+      "toNode": "n_shifts",
+      "toSide": "top",
+      "label": "shift_id"
+    },
+    {
+      "id": "e_3165df9bd9",
+      "fromNode": "n_cash_drawer_events",
+      "fromSide": "bottom",
+      "toNode": "n_workspaces",
+      "toSide": "top",
+      "label": "workspace_id"
+    },
+    {
+      "id": "e_d9378ca839",
+      "fromNode": "n_checklist_completions",
+      "fromSide": "bottom",
+      "toNode": "n_task_checklists",
+      "toSide": "top",
+      "label": "checklist_id"
+    },
+    {
+      "id": "e_16a24a8c54",
+      "fromNode": "n_checklist_completions",
+      "fromSide": "bottom",
+      "toNode": "n_checklist_items",
+      "toSide": "top",
+      "label": "item_id"
+    },
+    {
+      "id": "e_ce6a1206c6",
+      "fromNode": "n_checklist_completions",
+      "fromSide": "bottom",
+      "toNode": "n_shifts",
+      "toSide": "top",
+      "label": "shift_id"
+    },
+    {
+      "id": "e_b9bf32f914",
+      "fromNode": "n_checklist_completions",
+      "fromSide": "bottom",
+      "toNode": "n_workspaces",
+      "toSide": "top",
+      "label": "workspace_id"
+    },
+    {
+      "id": "e_6b4831fa9b",
+      "fromNode": "n_checklist_items",
+      "fromSide": "bottom",
+      "toNode": "n_task_checklists",
+      "toSide": "top",
+      "label": "checklist_id"
+    },
+    {
+      "id": "e_cb69fe875f",
+      "fromNode": "n_checklist_items",
+      "fromSide": "bottom",
+      "toNode": "n_workspaces",
+      "toSide": "top",
+      "label": "workspace_id"
+    },
+    {
+      "id": "e_ceffa10ef6",
+      "fromNode": "n_cost_items",
+      "fromSide": "bottom",
+      "toNode": "n_workspaces",
+      "toSide": "top",
+      "label": "workspace_id"
+    },
+    {
+      "id": "e_6dc37de787",
+      "fromNode": "n_custom_charge_presets",
+      "fromSide": "bottom",
+      "toNode": "n_branches",
+      "toSide": "top",
+      "label": "branch_id"
+    },
+    {
+      "id": "e_f8208374ab",
+      "fromNode": "n_custom_charge_presets",
+      "fromSide": "bottom",
+      "toNode": "n_workspaces",
+      "toSide": "top",
+      "label": "workspace_id"
+    },
+    {
+      "id": "e_aa7cf523fd",
+      "fromNode": "n_customer_points",
+      "fromSide": "bottom",
+      "toNode": "n_customers",
+      "toSide": "top",
+      "label": "customer_id"
+    },
+    {
+      "id": "e_17125da57e",
+      "fromNode": "n_customer_points",
+      "fromSide": "bottom",
+      "toNode": "n_orders",
+      "toSide": "top",
+      "label": "order_id"
+    },
+    {
+      "id": "e_953b8aebdd",
+      "fromNode": "n_customer_points",
+      "fromSide": "bottom",
+      "toNode": "n_workspaces",
+      "toSide": "top",
+      "label": "workspace_id"
+    },
+    {
+      "id": "e_f8afbf13e7",
+      "fromNode": "n_customers",
+      "fromSide": "bottom",
+      "toNode": "n_profiles",
+      "toSide": "top",
+      "label": "profile_id"
+    },
+    {
+      "id": "e_1b9bcd8892",
+      "fromNode": "n_customers",
+      "fromSide": "bottom",
+      "toNode": "n_workspaces",
+      "toSide": "top",
+      "label": "workspace_id"
+    },
+    {
+      "id": "e_25b0fa44ff",
+      "fromNode": "n_expense_categories",
+      "fromSide": "bottom",
+      "toNode": "n_workspaces",
+      "toSide": "top",
+      "label": "workspace_id"
+    },
+    {
+      "id": "e_ac322be8e3",
+      "fromNode": "n_expenses",
+      "fromSide": "bottom",
+      "toNode": "n_branches",
+      "toSide": "top",
+      "label": "branch_id"
+    },
+    {
+      "id": "e_4e37858c66",
+      "fromNode": "n_expenses",
+      "fromSide": "bottom",
+      "toNode": "n_expense_categories",
+      "toSide": "top",
+      "label": "category_id"
+    },
+    {
+      "id": "e_0398cf602c",
+      "fromNode": "n_expenses",
+      "fromSide": "bottom",
+      "toNode": "n_workspaces",
+      "toSide": "top",
+      "label": "workspace_id"
+    },
+    {
+      "id": "e_d64ef2527e",
+      "fromNode": "n_ingredient_movements_legacy",
+      "fromSide": "bottom",
+      "toNode": "n_inventory_catalog",
+      "toSide": "top",
+      "label": "ingredient_id"
+    },
+    {
+      "id": "e_a72b98821a",
+      "fromNode": "n_ingredient_movements_legacy",
+      "fromSide": "bottom",
+      "toNode": "n_workspaces",
+      "toSide": "top",
+      "label": "workspace_id"
+    },
+    {
+      "id": "e_cf236344bd",
+      "fromNode": "n_inventory_catalog",
+      "fromSide": "bottom",
+      "toNode": "n_products",
+      "toSide": "top",
+      "label": "product_id"
+    },
+    {
+      "id": "e_1a303ea550",
+      "fromNode": "n_inventory_catalog",
+      "fromSide": "bottom",
+      "toNode": "n_suppliers",
+      "toSide": "top",
+      "label": "supplier_id"
+    },
+    {
+      "id": "e_4cae2a947d",
+      "fromNode": "n_inventory_catalog",
+      "fromSide": "bottom",
+      "toNode": "n_workspaces",
+      "toSide": "top",
+      "label": "workspace_id"
+    },
+    {
+      "id": "e_7ef4373ff9",
+      "fromNode": "n_inventory_items",
+      "fromSide": "bottom",
+      "toNode": "n_branches",
+      "toSide": "top",
+      "label": "branch_id"
+    },
+    {
+      "id": "e_548cf59a17",
+      "fromNode": "n_inventory_items",
+      "fromSide": "bottom",
+      "toNode": "n_inventory_catalog",
+      "toSide": "top",
+      "label": "catalog_id"
+    },
+    {
+      "id": "e_f48c8a9add",
+      "fromNode": "n_inventory_items",
+      "fromSide": "bottom",
+      "toNode": "n_workspaces",
+      "toSide": "top",
+      "label": "workspace_id"
+    },
+    {
+      "id": "e_95224717a4",
+      "fromNode": "n_kitchen_ticket_items",
+      "fromSide": "bottom",
+      "toNode": "n_order_items",
+      "toSide": "top",
+      "label": "order_item_id"
+    },
+    {
+      "id": "e_e82e1f535e",
+      "fromNode": "n_kitchen_ticket_items",
+      "fromSide": "bottom",
+      "toNode": "n_kitchen_tickets",
+      "toSide": "top",
+      "label": "ticket_id"
+    },
+    {
+      "id": "e_d815708de4",
+      "fromNode": "n_kitchen_tickets",
+      "fromSide": "bottom",
+      "toNode": "n_branches",
+      "toSide": "top",
+      "label": "branch_id"
+    },
+    {
+      "id": "e_995ad5fd45",
+      "fromNode": "n_kitchen_tickets",
+      "fromSide": "bottom",
+      "toNode": "n_orders",
+      "toSide": "top",
+      "label": "order_id"
+    },
+    {
+      "id": "e_7cb303bda7",
+      "fromNode": "n_kitchen_tickets",
+      "fromSide": "bottom",
+      "toNode": "n_workspaces",
+      "toSide": "top",
+      "label": "workspace_id"
+    },
+    {
+      "id": "e_87d07e1fa5",
+      "fromNode": "n_loyalty_rules",
+      "fromSide": "bottom",
+      "toNode": "n_workspaces",
+      "toSide": "top",
+      "label": "workspace_id"
+    },
+    {
+      "id": "e_c5a96f39dc",
+      "fromNode": "n_manager_approvals",
+      "fromSide": "bottom",
+      "toNode": "n_branches",
+      "toSide": "top",
+      "label": "branch_id"
+    },
+    {
+      "id": "e_d391056f40",
+      "fromNode": "n_manager_approvals",
+      "fromSide": "bottom",
+      "toNode": "n_workspaces",
+      "toSide": "top",
+      "label": "workspace_id"
+    },
+    {
+      "id": "e_08baeb6d79",
+      "fromNode": "n_menu_book_hotspots",
+      "fromSide": "bottom",
+      "toNode": "n_products",
+      "toSide": "top",
+      "label": "product_id"
+    },
+    {
+      "id": "e_f132852d4f",
+      "fromNode": "n_menu_book_hotspots",
+      "fromSide": "bottom",
+      "toNode": "n_workspaces",
+      "toSide": "top",
+      "label": "workspace_id"
+    },
+    {
+      "id": "e_f574ad4d84",
+      "fromNode": "n_menu_book_pages",
+      "fromSide": "bottom",
+      "toNode": "n_workspaces",
+      "toSide": "top",
+      "label": "workspace_id"
+    },
+    {
+      "id": "e_8d4b4ef571",
+      "fromNode": "n_order_booking_link",
+      "fromSide": "bottom",
+      "toNode": "n_bookings",
+      "toSide": "top",
+      "label": "booking_id"
+    },
+    {
+      "id": "e_137755782c",
+      "fromNode": "n_order_booking_link",
+      "fromSide": "bottom",
+      "toNode": "n_orders",
+      "toSide": "top",
+      "label": "order_id"
+    },
+    {
+      "id": "e_f8b7a7b558",
+      "fromNode": "n_order_charges",
+      "fromSide": "bottom",
+      "toNode": "n_branches",
+      "toSide": "top",
+      "label": "branch_id"
+    },
+    {
+      "id": "e_0d8d9876bd",
+      "fromNode": "n_order_charges",
+      "fromSide": "bottom",
+      "toNode": "n_orders",
+      "toSide": "top",
+      "label": "order_id"
+    },
+    {
+      "id": "e_0108a1d533",
+      "fromNode": "n_order_charges",
+      "fromSide": "bottom",
+      "toNode": "n_workspaces",
+      "toSide": "top",
+      "label": "workspace_id"
+    },
+    {
+      "id": "e_3562298022",
+      "fromNode": "n_order_item_addons",
+      "fromSide": "bottom",
+      "toNode": "n_product_addons",
+      "toSide": "top",
+      "label": "addon_id"
+    },
+    {
+      "id": "e_87b85a634b",
+      "fromNode": "n_order_item_addons",
+      "fromSide": "bottom",
+      "toNode": "n_order_items",
+      "toSide": "top",
+      "label": "order_item_id"
+    },
+    {
+      "id": "e_474a4c5a76",
+      "fromNode": "n_order_items",
+      "fromSide": "bottom",
+      "toNode": "n_orders",
+      "toSide": "top",
+      "label": "order_id"
+    },
+    {
+      "id": "e_093fad2fb9",
+      "fromNode": "n_order_items",
+      "fromSide": "bottom",
+      "toNode": "n_products",
+      "toSide": "top",
+      "label": "product_id"
+    },
+    {
+      "id": "e_e242429aa2",
+      "fromNode": "n_order_items",
+      "fromSide": "bottom",
+      "toNode": "n_product_variants",
+      "toSide": "top",
+      "label": "variant_id"
+    },
+    {
+      "id": "e_d9e29cdc56",
+      "fromNode": "n_orders",
+      "fromSide": "bottom",
+      "toNode": "n_branches",
+      "toSide": "top",
+      "label": "branch_id"
+    },
+    {
+      "id": "e_be22f159d9",
+      "fromNode": "n_orders",
+      "fromSide": "bottom",
+      "toNode": "n_customers",
+      "toSide": "top",
+      "label": "customer_id"
+    },
+    {
+      "id": "e_128d8917bd",
+      "fromNode": "n_orders",
+      "fromSide": "bottom",
+      "toNode": "n_vouchers",
+      "toSide": "top",
+      "label": "voucher_id"
+    },
+    {
+      "id": "e_4863800459",
+      "fromNode": "n_orders",
+      "fromSide": "bottom",
+      "toNode": "n_workspaces",
+      "toSide": "top",
+      "label": "workspace_id"
+    },
+    {
+      "id": "e_c2bd950f9c",
+      "fromNode": "n_payment_intents",
+      "fromSide": "bottom",
+      "toNode": "n_bookings",
+      "toSide": "top",
+      "label": "booking_id"
+    },
+    {
+      "id": "e_6b161c9607",
+      "fromNode": "n_payment_intents",
+      "fromSide": "bottom",
+      "toNode": "n_orders",
+      "toSide": "top",
+      "label": "order_id"
+    },
+    {
+      "id": "e_c040fc7d92",
+      "fromNode": "n_payment_intents",
+      "fromSide": "bottom",
+      "toNode": "n_workspaces",
+      "toSide": "top",
+      "label": "workspace_id"
+    },
+    {
+      "id": "e_d605de4383",
+      "fromNode": "n_payments",
+      "fromSide": "bottom",
+      "toNode": "n_payment_intents",
+      "toSide": "top",
+      "label": "intent_id"
+    },
+    {
+      "id": "e_caf7c2da1c",
+      "fromNode": "n_pos_devices",
+      "fromSide": "bottom",
+      "toNode": "n_branches",
+      "toSide": "top",
+      "label": "branch_id"
+    },
+    {
+      "id": "e_97203ed604",
+      "fromNode": "n_pos_devices",
+      "fromSide": "bottom",
+      "toNode": "n_workspaces",
+      "toSide": "top",
+      "label": "workspace_id"
+    },
+    {
+      "id": "e_f6329f8fe8",
+      "fromNode": "n_product_addon_groups",
+      "fromSide": "bottom",
+      "toNode": "n_products",
+      "toSide": "top",
+      "label": "product_id"
+    },
+    {
+      "id": "e_00b25a1c99",
+      "fromNode": "n_product_addon_groups",
+      "fromSide": "bottom",
+      "toNode": "n_workspaces",
+      "toSide": "top",
+      "label": "workspace_id"
+    },
+    {
+      "id": "e_5b76b096df",
+      "fromNode": "n_product_addons",
+      "fromSide": "bottom",
+      "toNode": "n_product_addon_groups",
+      "toSide": "top",
+      "label": "group_id"
+    },
+    {
+      "id": "e_8216495d70",
+      "fromNode": "n_product_addons",
+      "fromSide": "bottom",
+      "toNode": "n_workspaces",
+      "toSide": "top",
+      "label": "workspace_id"
+    },
+    {
+      "id": "e_7a78fcf382",
+      "fromNode": "n_product_categories",
+      "fromSide": "bottom",
+      "toNode": "n_workspaces",
+      "toSide": "top",
+      "label": "workspace_id"
+    },
+    {
+      "id": "e_7fffb93bc7",
+      "fromNode": "n_product_variants",
+      "fromSide": "bottom",
+      "toNode": "n_products",
+      "toSide": "top",
+      "label": "product_id"
+    },
+    {
+      "id": "e_6d3c8155ec",
+      "fromNode": "n_products",
+      "fromSide": "bottom",
+      "toNode": "n_product_categories",
+      "toSide": "top",
+      "label": "category_id"
+    },
+    {
+      "id": "e_b451fadfd8",
+      "fromNode": "n_products",
+      "fromSide": "bottom",
+      "toNode": "n_workspaces",
+      "toSide": "top",
+      "label": "workspace_id"
+    },
+    {
+      "id": "e_f834322e30",
+      "fromNode": "n_receipts",
+      "fromSide": "bottom",
+      "toNode": "n_transactions",
+      "toSide": "top",
+      "label": "transaction_id"
+    },
+    {
+      "id": "e_d75cfd5892",
+      "fromNode": "n_receipts",
+      "fromSide": "bottom",
+      "toNode": "n_workspaces",
+      "toSide": "top",
+      "label": "workspace_id"
+    },
+    {
+      "id": "e_ea1632875a",
+      "fromNode": "n_recipe_items",
+      "fromSide": "bottom",
+      "toNode": "n_inventory_catalog",
+      "toSide": "top",
+      "label": "catalog_id"
+    },
+    {
+      "id": "e_508990ccdd",
+      "fromNode": "n_recipe_items",
+      "fromSide": "bottom",
+      "toNode": "n_products",
+      "toSide": "top",
+      "label": "product_id"
+    },
+    {
+      "id": "e_f416ea5f1a",
+      "fromNode": "n_recipe_items",
+      "fromSide": "bottom",
+      "toNode": "n_workspaces",
+      "toSide": "top",
+      "label": "workspace_id"
+    },
+    {
+      "id": "e_be3d89c95f",
+      "fromNode": "n_refunds",
+      "fromSide": "bottom",
+      "toNode": "n_manager_approvals",
+      "toSide": "top",
+      "label": "manager_approval_id"
+    },
+    {
+      "id": "e_9042795bce",
+      "fromNode": "n_refunds",
+      "fromSide": "bottom",
+      "toNode": "n_orders",
+      "toSide": "top",
+      "label": "order_id"
+    },
+    {
+      "id": "e_100b8d6647",
+      "fromNode": "n_refunds",
+      "fromSide": "bottom",
+      "toNode": "n_payments",
+      "toSide": "top",
+      "label": "payment_id"
+    },
+    {
+      "id": "e_cfd0cab162",
+      "fromNode": "n_refunds",
+      "fromSide": "bottom",
+      "toNode": "n_payment_intents",
+      "toSide": "top",
+      "label": "payment_intent_id"
+    },
+    {
+      "id": "e_57e16d1252",
+      "fromNode": "n_resource_blocks",
+      "fromSide": "bottom",
+      "toNode": "n_branches",
+      "toSide": "top",
+      "label": "branch_id"
+    },
+    {
+      "id": "e_bbe1f1bac1",
+      "fromNode": "n_resource_blocks",
+      "fromSide": "bottom",
+      "toNode": "n_bookable_resources",
+      "toSide": "top",
+      "label": "resource_id"
+    },
+    {
+      "id": "e_d319d50ed8",
+      "fromNode": "n_resource_blocks",
+      "fromSide": "bottom",
+      "toNode": "n_workspaces",
+      "toSide": "top",
+      "label": "workspace_id"
+    },
+    {
+      "id": "e_f4d4eaf465",
+      "fromNode": "n_shift_events",
+      "fromSide": "bottom",
+      "toNode": "n_shifts",
+      "toSide": "top",
+      "label": "shift_id"
+    },
+    {
+      "id": "e_1b11705602",
+      "fromNode": "n_shift_events",
+      "fromSide": "bottom",
+      "toNode": "n_profiles",
+      "toSide": "top",
+      "label": "staff_id"
+    },
+    {
+      "id": "e_52e2a76d77",
+      "fromNode": "n_shift_events",
+      "fromSide": "bottom",
+      "toNode": "n_workspaces",
+      "toSide": "top",
+      "label": "workspace_id"
+    },
+    {
+      "id": "e_396d7d62d0",
+      "fromNode": "n_shifts",
+      "fromSide": "bottom",
+      "toNode": "n_branches",
+      "toSide": "top",
+      "label": "branch_id"
+    },
+    {
+      "id": "e_a487fe4332",
+      "fromNode": "n_shifts",
+      "fromSide": "bottom",
+      "toNode": "n_pos_devices",
+      "toSide": "top",
+      "label": "device_id"
+    },
+    {
+      "id": "e_c39c02b842",
+      "fromNode": "n_shifts",
+      "fromSide": "bottom",
+      "toNode": "n_workspaces",
+      "toSide": "top",
+      "label": "workspace_id"
+    },
+    {
+      "id": "e_dd49422a9e",
+      "fromNode": "n_stock_movements",
+      "fromSide": "bottom",
+      "toNode": "n_branches",
+      "toSide": "top",
+      "label": "branch_id"
+    },
+    {
+      "id": "e_4b7ea0d044",
+      "fromNode": "n_stock_movements",
+      "fromSide": "bottom",
+      "toNode": "n_inventory_items",
+      "toSide": "top",
+      "label": "inventory_item_id"
+    },
+    {
+      "id": "e_7751bc8710",
+      "fromNode": "n_stock_movements",
+      "fromSide": "bottom",
+      "toNode": "n_orders",
+      "toSide": "top",
+      "label": "order_id"
+    },
+    {
+      "id": "e_1796370327",
+      "fromNode": "n_stock_movements",
+      "fromSide": "bottom",
+      "toNode": "n_refunds",
+      "toSide": "top",
+      "label": "refund_id"
+    },
+    {
+      "id": "e_a688dbba1a",
+      "fromNode": "n_stock_movements",
+      "fromSide": "bottom",
+      "toNode": "n_workspaces",
+      "toSide": "top",
+      "label": "workspace_id"
+    },
+    {
+      "id": "e_4db7aefa03",
+      "fromNode": "n_suppliers",
+      "fromSide": "bottom",
+      "toNode": "n_workspaces",
+      "toSide": "top",
+      "label": "workspace_id"
+    },
+    {
+      "id": "e_dd258eceb2",
+      "fromNode": "n_task_checklists",
+      "fromSide": "bottom",
+      "toNode": "n_branches",
+      "toSide": "top",
+      "label": "branch_id"
+    },
+    {
+      "id": "e_258dac479a",
+      "fromNode": "n_task_checklists",
+      "fromSide": "bottom",
+      "toNode": "n_workspaces",
+      "toSide": "top",
+      "label": "workspace_id"
+    },
+    {
+      "id": "e_24bda14f25",
+      "fromNode": "n_transactions",
+      "fromSide": "bottom",
+      "toNode": "n_branches",
+      "toSide": "top",
+      "label": "branch_id"
+    },
+    {
+      "id": "e_101e056bef",
+      "fromNode": "n_transactions",
+      "fromSide": "bottom",
+      "toNode": "n_workspaces",
+      "toSide": "top",
+      "label": "workspace_id"
+    },
+    {
+      "id": "e_6ac7e6a335",
+      "fromNode": "n_voucher_redemptions",
+      "fromSide": "bottom",
+      "toNode": "n_bookings",
+      "toSide": "top",
+      "label": "booking_id"
+    },
+    {
+      "id": "e_388356b44a",
+      "fromNode": "n_voucher_redemptions",
+      "fromSide": "bottom",
+      "toNode": "n_customers",
+      "toSide": "top",
+      "label": "customer_id"
+    },
+    {
+      "id": "e_07e4049da7",
+      "fromNode": "n_voucher_redemptions",
+      "fromSide": "bottom",
+      "toNode": "n_orders",
+      "toSide": "top",
+      "label": "order_id"
+    },
+    {
+      "id": "e_c1916ba44b",
+      "fromNode": "n_voucher_redemptions",
+      "fromSide": "bottom",
+      "toNode": "n_vouchers",
+      "toSide": "top",
+      "label": "voucher_id"
+    },
+    {
+      "id": "e_d48312dd62",
+      "fromNode": "n_voucher_redemptions",
+      "fromSide": "bottom",
+      "toNode": "n_workspaces",
+      "toSide": "top",
+      "label": "workspace_id"
+    },
+    {
+      "id": "e_59079c1b61",
+      "fromNode": "n_vouchers",
+      "fromSide": "bottom",
+      "toNode": "n_workspaces",
+      "toSide": "top",
+      "label": "workspace_id"
+    },
+    {
+      "id": "e_ee81a0d1e9",
+      "fromNode": "n_workspace_members",
+      "fromSide": "bottom",
+      "toNode": "n_branches",
+      "toSide": "top",
+      "label": "branch_id"
+    },
+    {
+      "id": "e_6af1a946c9",
+      "fromNode": "n_workspace_members",
+      "fromSide": "bottom",
+      "toNode": "n_profiles",
+      "toSide": "top",
+      "label": "user_id"
+    },
+    {
+      "id": "e_91915cd01f",
+      "fromNode": "n_workspace_members",
+      "fromSide": "bottom",
+      "toNode": "n_workspaces",
+      "toSide": "top",
+      "label": "workspace_id"
+    },
+    {
+      "id": "e_86df94a7d3",
+      "fromNode": "n_workspace_printers",
+      "fromSide": "bottom",
+      "toNode": "n_workspaces",
+      "toSide": "top",
+      "label": "workspace_id"
+    },
+    {
+      "id": "e_316faf9322",
+      "fromNode": "n_z_reports",
+      "fromSide": "bottom",
+      "toNode": "n_branches",
+      "toSide": "top",
+      "label": "branch_id"
+    },
+    {
+      "id": "e_c4fe087434",
+      "fromNode": "n_z_reports",
+      "fromSide": "bottom",
+      "toNode": "n_workspaces",
+      "toSide": "top",
+      "label": "workspace_id"
+    }
+  ]
+}

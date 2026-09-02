@@ -1,0 +1,323 @@
+import { StyleSheet } from "react-native";
+import { R } from "../theme/tokens";
+import { MONO } from "../theme/mono";
+import type { useTheme } from "../theme/ThemeContext";
+
+export type ThemeColors = ReturnType<typeof useTheme>["C"];
+
+export const makeStyles = (C: ThemeColors) => StyleSheet.create({
+  root:     { flex: 1, backgroundColor: C.bg },
+  count:    { color: C.ink4, fontSize: 12, fontFamily: MONO },
+  center:   { flex: 1, alignItems: "center", justifyContent: "center", gap: 10, paddingTop: 60 },
+  emptyTxt: { color: C.ink4, fontSize: 13 },
+  emptySub: { color: C.ink4, fontSize: 11 },
+  list:     { padding: 12, paddingBottom: 32 },
+
+  newBookingBtn: {
+    flexDirection: "row", alignItems: "center", gap: 5,
+    backgroundColor: C.rust, borderRadius: R.md,
+    paddingHorizontal: 12, paddingVertical: 7,
+  },
+  newBookingBtnTxt: { color: "#fff", fontSize: 13, fontWeight: "700" },
+  blockDatesBtn: {
+    flexDirection: "row", alignItems: "center", gap: 5,
+    backgroundColor: C.surface, borderRadius: R.md, borderWidth: 1, borderColor: C.line,
+    paddingHorizontal: 12, paddingVertical: 7,
+  },
+  blockDatesBtnTxt: { color: C.ink2, fontSize: 13, fontWeight: "700" },
+
+  statsStrip:  { flexDirection: "row", alignItems: "stretch", gap: 6, paddingHorizontal: 10, paddingVertical: 8, borderBottomWidth: 1, borderBottomColor: C.line, backgroundColor: C.bg2, flexShrink: 0 },
+  statChip:    { flex: 1, flexDirection: "column", alignItems: "center", justifyContent: "center", paddingVertical: 14, borderRadius: R.md, borderWidth: 1, backgroundColor: C.surface },
+  statChipVal: { fontSize: 24, fontWeight: "800", fontFamily: MONO, lineHeight: 28 },
+  statChipLbl: { color: C.ink4, fontSize: 10, marginTop: 2 },
+
+  viewTabBar:      { flexDirection: "row", borderBottomWidth: 1, borderBottomColor: C.line, backgroundColor: C.bg2 },
+  viewTab:         { flex: 1, alignItems: "center", paddingVertical: 10, borderBottomWidth: 2, borderBottomColor: "transparent" },
+  viewTabActive:   { borderBottomColor: C.amber },
+  viewTabTxt:      { color: C.ink4, fontSize: 13, fontWeight: "600" },
+  viewTabTxtActive:{ color: C.amber },
+
+  dateSel: {
+    flexDirection: "row", alignItems: "center", gap: 8,
+    paddingHorizontal: 12, paddingVertical: 10,
+    borderBottomWidth: 1, borderBottomColor: C.line, backgroundColor: C.bg2,
+    flexShrink: 0, minHeight: 62,
+  },
+  dateChip:          { paddingHorizontal: 14, paddingVertical: 11, borderRadius: R.full, borderWidth: 1, borderColor: C.line, backgroundColor: C.surface },
+  dateChipActive:    { borderColor: `${C.amber}60`, backgroundColor: `${C.amber}18` },
+  dateChipTxt:       { color: C.ink3, fontSize: 13, fontWeight: "600" },
+  dateChipTxtActive: { color: C.amber },
+  dateArrowBtn:      { width: 44, height: 44, alignItems: "center", justifyContent: "center", borderRadius: R.md, borderWidth: 1, borderColor: C.line, backgroundColor: C.surface },
+  datePickBtn:       { flex: 1, flexDirection: "row", alignItems: "center", justifyContent: "center", gap: 8, height: 44, borderRadius: R.md, borderWidth: 1, borderColor: `${C.amber}44`, backgroundColor: `${C.amber}12` },
+  datePickBtnTxt:    { color: C.amber, fontSize: 14, fontWeight: "700" },
+
+  availGrid:        { flexDirection: "row", flexWrap: "wrap", padding: 6, paddingBottom: 32 },
+  availCard:        { width: "50%", padding: 6 },
+  availCardInner:   { flex: 1, backgroundColor: C.surface, borderRadius: R.lg, borderWidth: 1, borderColor: C.line, padding: 12, gap: 8 },
+  availCardTop:     { flexDirection: "row", alignItems: "flex-start", gap: 8 },
+  availCardName:    { color: C.ink, fontSize: 15, fontWeight: "700" },
+  availCardSub:     { color: C.ink4, fontSize: 11, fontFamily: MONO, marginTop: 2 },
+  availStatusBadge: { paddingHorizontal: 9, paddingVertical: 3, borderRadius: R.full, borderWidth: 1 },
+  availStatusTxt:   { fontSize: 10, fontWeight: "700", fontFamily: MONO },
+  availDetail:      { color: C.ink3, fontSize: 12, fontFamily: MONO },
+  availNext:        { color: C.good, fontSize: 11, fontFamily: MONO },
+  availActions:     { flexDirection: "row", gap: 8, marginTop: 4, paddingTop: 10, borderTopWidth: 1, borderTopColor: C.lineSoft },
+  availBtnCal:      { flexDirection: "row", alignItems: "center", gap: 5, paddingHorizontal: 12, paddingVertical: 7, borderRadius: R.md, borderWidth: 1, borderColor: C.line, backgroundColor: C.bg },
+  availBtnCalTxt:   { color: C.ink3, fontSize: 12, fontWeight: "600" },
+  availBtnBook:     { flexDirection: "row", alignItems: "center", gap: 5, paddingHorizontal: 12, paddingVertical: 7, borderRadius: R.md, backgroundColor: C.good },
+  availBtnBookTxt:  { color: "#000000", fontSize: 12, fontWeight: "700" },
+
+  tabBar:        { height: 38, flexShrink: 0, borderBottomWidth: 1, borderBottomColor: C.line },
+  tabBarContent: { flexDirection: "row", paddingHorizontal: 12, paddingVertical: 4, gap: 6, alignItems: "center" },
+  tab:           { paddingHorizontal: 12, paddingVertical: 3, borderRadius: R.full, borderWidth: 1, borderColor: C.line, backgroundColor: C.surface },
+  tabActive:     { backgroundColor: `${C.amber}18`, borderColor: `${C.amber}60` },
+  tabTxt:        { color: C.ink3, fontSize: 12, fontWeight: "600", fontFamily: MONO },
+  tabTxtActive:  { color: C.amber },
+
+  searchWrap: {
+    flexDirection: "row", alignItems: "center", gap: 8,
+    marginHorizontal: 12, marginTop: 6, marginBottom: 4,
+    backgroundColor: C.surface, borderRadius: R.md, borderWidth: 1, borderColor: C.line,
+  },
+  searchInput: { flex: 1, paddingVertical: 6, paddingHorizontal: 6, color: C.ink, fontSize: 13 },
+
+  card: {
+    backgroundColor: C.surface, borderRadius: R.lg, borderWidth: 1,
+    borderColor: C.line, padding: 14, marginBottom: 10, gap: 6,
+  },
+  cardTop:        { flexDirection: "row", alignItems: "flex-start", gap: 8 },
+  cardRoom:       { color: C.ink, fontSize: 15, fontWeight: "700" },
+  cardRef:        { color: C.ink4, fontSize: 10, fontFamily: MONO },
+  cardGuestRow:   { flexDirection: "row", alignItems: "center", gap: 6 },
+  cardGuestName:  { color: C.ink2, fontSize: 13, fontWeight: "600", flex: 1 },
+  cardGuestPhone: { color: C.ink4, fontSize: 11, fontFamily: MONO },
+  cardTimeRow:    { flexDirection: "row", alignItems: "center", gap: 6 },
+  cardTime:       { color: C.ink3, fontSize: 11, fontFamily: MONO, flex: 1 },
+  cardNotes:      { color: C.ink4, fontSize: 11, fontStyle: "italic" },
+  cardTotal:      { color: C.amber, fontSize: 15, fontWeight: "700", fontFamily: MONO },
+  expiryTxt:      { color: C.warn, fontSize: 11, fontFamily: MONO },
+  expiryUrgent:   { color: C.bad },
+  badge:          { paddingHorizontal: 8, paddingVertical: 3, borderRadius: R.full, borderWidth: 1 },
+  badgeTxt:       { fontSize: 10, fontWeight: "600", fontFamily: MONO },
+
+  cardActions: { flexDirection: "row", alignItems: "center", gap: 6, marginTop: 6, paddingTop: 10, borderTopWidth: 1, borderTopColor: C.lineSoft },
+  cardDetailBtn: {
+    flexDirection: "row", alignItems: "center", gap: 4,
+    paddingHorizontal: 10, paddingVertical: 7,
+    borderRadius: R.md, borderWidth: 1, borderColor: C.line, backgroundColor: C.bg,
+  },
+  cardDetailBtnTxt: { color: C.ink3, fontSize: 12, fontWeight: "600" },
+  cardChipGreen: {
+    flexDirection: "row", alignItems: "center", gap: 5,
+    paddingHorizontal: 12, paddingVertical: 7,
+    borderRadius: R.md, backgroundColor: C.good,
+  },
+  cardChipGreenTxt: { color: "#000000", fontSize: 12, fontWeight: "700" },
+  cardChipAmber: {
+    flexDirection: "row", alignItems: "center", gap: 5,
+    paddingHorizontal: 12, paddingVertical: 7,
+    borderRadius: R.md, borderWidth: 1, borderColor: `${C.amber}60`, backgroundColor: `${C.amber}18`,
+  },
+  cardChipAmberTxt: { color: C.amber, fontSize: 12, fontWeight: "700" },
+  cardChipCancel: {
+    width: 32, height: 32, borderRadius: R.md,
+    alignItems: "center", justifyContent: "center",
+    borderWidth: 1, borderColor: `${C.bad}44`, backgroundColor: `${C.bad}0d`,
+  },
+
+  detailSheet: {
+    backgroundColor: C.bg2, borderRadius: R.xl,
+    maxHeight: "88%", width: "90%", maxWidth: 560,
+  },
+  detailHandle: { display: "none" },
+  detailHeader: {
+    flexDirection: "row", alignItems: "flex-start", gap: 8,
+    paddingHorizontal: 20, paddingTop: 14, paddingBottom: 14,
+    borderBottomWidth: 1, borderBottomColor: C.lineSoft,
+  },
+  detailRoom:  { color: C.ink, fontSize: 17, fontWeight: "700" },
+  detailRef:   { color: C.ink4, fontSize: 11, fontFamily: MONO },
+  detailSection: { paddingHorizontal: 20, paddingTop: 16, gap: 10 },
+  detailSectionTitle: { color: C.ink4, fontSize: 10, fontWeight: "700", fontFamily: MONO, letterSpacing: 0.8 },
+  detailRow:    { flexDirection: "row", alignItems: "flex-start", gap: 10 },
+  detailLabel:  { color: C.ink4, fontSize: 11, fontFamily: MONO, marginBottom: 1 },
+  detailVal:    { color: C.ink2, fontSize: 13 },
+  detailFooter: {
+    flexDirection: "row", alignItems: "center", gap: 10,
+    paddingHorizontal: 20, paddingTop: 14, paddingBottom: 24,
+    borderTopWidth: 1, borderTopColor: C.line,
+  },
+  detailCloseBtn: {
+    paddingHorizontal: 16, paddingVertical: 12,
+    borderRadius: R.lg, borderWidth: 1, borderColor: C.line, backgroundColor: C.surface,
+  },
+  detailCloseBtnTxt: { color: C.ink2, fontSize: 14, fontWeight: "600" },
+  detailFooterDanger: {
+    flexDirection: "row", alignItems: "center", gap: 6,
+    paddingHorizontal: 14, paddingVertical: 12,
+    borderRadius: R.lg, borderWidth: 1, borderColor: `${C.bad}44`, backgroundColor: `${C.bad}0d`,
+  },
+  detailFooterDangerTxt: { color: C.bad, fontSize: 14, fontWeight: "600" },
+  detailFooterPrimary: {
+    flex: 1, flexDirection: "row", alignItems: "center", justifyContent: "center", gap: 8,
+    paddingVertical: 13, borderRadius: R.lg, backgroundColor: C.good,
+  },
+  detailFooterPrimaryTxt: { color: "#000000", fontSize: 15, fontWeight: "700" },
+  detailFooterAlt: {
+    flex: 1, flexDirection: "row", alignItems: "center", justifyContent: "center", gap: 8,
+    paddingVertical: 13, borderRadius: R.lg,
+    borderWidth: 1, borderColor: `${C.amber}60`, backgroundColor: `${C.amber}18`,
+  },
+  detailFooterAltTxt: { color: C.amber, fontSize: 15, fontWeight: "700" },
+  detailFooterRefund: {
+    flexDirection: "row", alignItems: "center", justifyContent: "center", gap: 6,
+    paddingVertical: 10, paddingHorizontal: 16, borderRadius: R.lg,
+    borderWidth: 1, borderColor: `${C.ink3}40`, backgroundColor: `${C.ink3}12`,
+  },
+  detailFooterRefundTxt: { color: C.ink2, fontSize: 14, fontWeight: "600" },
+
+  modalBd:  { flex: 1, backgroundColor: "rgba(0,0,0,0.55)" },
+  modalKav: { flex: 1, justifyContent: "center", alignItems: "center", padding: 16 },
+  sheet: { backgroundColor: C.bg2, borderRadius: R.xl, maxHeight: "92%", width: "100%", maxWidth: 640, overflow: "hidden" },
+  sheetHeader: {
+    flexDirection: "row", alignItems: "center", justifyContent: "space-between",
+    paddingHorizontal: 20, paddingTop: 18, paddingBottom: 12,
+    borderBottomWidth: 1, borderBottomColor: C.lineSoft,
+  },
+  sheetTitle:   { color: C.ink, fontSize: 17, fontWeight: "700" },
+  sheetContent: { padding: 20, gap: 12, paddingBottom: 8 },
+  sheetFooter:  { flexDirection: "row", gap: 10, padding: 16, borderTopWidth: 1, borderTopColor: C.line },
+
+  confirmBtn: {
+    flex: 1, flexDirection: "row", alignItems: "center", justifyContent: "center", gap: 7,
+    paddingVertical: 13, borderRadius: R.lg, backgroundColor: C.good,
+  },
+  confirmBtnTxt: { color: "#000000", fontSize: 14, fontWeight: "700" },
+
+  headerConfirmBtn: {
+    flexDirection: "row", alignItems: "center", justifyContent: "center",
+    paddingHorizontal: 14, paddingVertical: 8, borderRadius: R.cta, backgroundColor: C.good,
+    marginLeft: 10,
+  },
+  headerConfirmBtnTxt: { color: "#000000", fontSize: 13, fontWeight: "700" },
+  footerConfirmBtn: {
+    width: "100%", marginLeft: 0, padding: 14, borderRadius: R.cta,
+  },
+
+  fieldLabel:      { color: C.ink3, fontSize: 10, letterSpacing: 0.8, textTransform: "uppercase", fontFamily: MONO },
+  input: {
+    backgroundColor: C.surface, borderRadius: R.md, borderWidth: 1, borderColor: C.line,
+    paddingHorizontal: 14, paddingVertical: 10, color: C.ink, fontSize: 14,
+  },
+  row2:       { flexDirection: "row", gap: 10 },
+  chipGrid:   { flexDirection: "row", flexWrap: "wrap", gap: 8 },
+  chip:       { paddingHorizontal: 12, paddingVertical: 8, borderRadius: R.md, borderWidth: 1, borderColor: C.line, backgroundColor: C.surface, gap: 2 },
+  chipSel:    { backgroundColor: `${C.rust}18`, borderColor: `${C.rust}66` },
+  chipTxt:    { color: C.ink3, fontSize: 13, fontWeight: "600" },
+  chipTxtSel: { color: C.rust },
+  chipSub:    { color: C.ink4, fontSize: 10, fontFamily: MONO },
+  chipSubRow: { flexDirection: "row", alignItems: "center", gap: 3 },
+  totalRow: {
+    flexDirection: "row", alignItems: "center", justifyContent: "space-between",
+    backgroundColor: `${C.amber}11`, borderRadius: R.md, paddingHorizontal: 14, paddingVertical: 10,
+  },
+  totalLabel: { color: C.ink3, fontSize: 12, fontFamily: MONO },
+  totalAmt:   { color: C.amber, fontSize: 16, fontWeight: "700", fontFamily: MONO },
+  dateBar: {
+    flexDirection: "row", alignItems: "center",
+    backgroundColor: `${C.amber}11`, borderRadius: R.md, borderWidth: 1, borderColor: `${C.amber}33`,
+    paddingHorizontal: 14, paddingVertical: 10,
+  },
+  dateBarLabel:   { color: C.ink4, fontSize: 9, fontFamily: MONO, letterSpacing: 0.8, textTransform: "uppercase" },
+  dateBarDates:   { color: C.amber, fontSize: 13, fontWeight: "600", fontFamily: MONO, marginTop: 2 },
+  dateBarEdit:    { color: C.ink3, fontSize: 11, fontFamily: MONO },
+  datePlaceholder:{ color: C.ink4, fontSize: 12, fontStyle: "italic", textAlign: "center", paddingVertical: 6 },
+
+  payPill: {
+    paddingHorizontal: 7, paddingVertical: 2, borderRadius: R.full,
+    backgroundColor: `${C.warn}18`, borderWidth: 1, borderColor: `${C.warn}44`,
+  },
+  payPillTxt:        { color: C.warn, fontSize: 9, fontWeight: "700", fontFamily: MONO },
+  payPillPartial:    { backgroundColor: `${C.amber}18`, borderColor: `${C.amber}44` },
+  payPillPartialTxt: { color: C.amber },
+  payPillPaid:       { paddingHorizontal: 7, paddingVertical: 2, borderRadius: R.full, backgroundColor: `${C.good}18`, borderWidth: 1, borderColor: `${C.good}44` },
+  payPillPaidTxt:    { color: C.good, fontSize: 9, fontWeight: "700", fontFamily: MONO },
+  payUrgentBanner:   { flexDirection: "row", alignItems: "center", gap: 5, marginTop: 4, paddingHorizontal: 8, paddingVertical: 5, borderRadius: R.sm, backgroundColor: `${C.bad}12`, borderWidth: 1, borderColor: `${C.bad}33` },
+  payUrgentTxt:      { color: C.bad, fontSize: 11, fontWeight: "600", flex: 1 },
+
+  paySheet: {
+    backgroundColor: C.bg2, borderRadius: R.xl, width: "100%", maxWidth: 480, maxHeight: "80%", overflow: "hidden",
+  },
+  depositToggle: {
+    flexDirection: "row", alignItems: "center", gap: 10,
+    paddingHorizontal: 14, paddingVertical: 10,
+    borderRadius: R.md, borderWidth: 1, borderColor: C.line, backgroundColor: C.surface,
+  },
+  depositToggleOn:  { borderColor: `${C.amber}60`, backgroundColor: `${C.amber}0e` },
+  depositToggleTxt: { color: C.ink3, fontSize: 13 },
+  quickAmt: {
+    flex: 1, paddingVertical: 10, borderRadius: R.md,
+    alignItems: "center", backgroundColor: C.surface,
+    borderWidth: 1, borderColor: C.line,
+  },
+  quickAmtTxt: { color: C.ink2, fontSize: 13, fontWeight: "600", fontFamily: MONO },
+
+  filterRow:       { flexDirection: "row", paddingHorizontal: 10, paddingVertical: 8, gap: 8, alignItems: "center" },
+  filterDateBtn:   { paddingHorizontal: 12, paddingVertical: 7, borderRadius: R.md, borderWidth: 1, borderColor: C.line, backgroundColor: C.surface, minWidth: 100 },
+  filterDateLabel: { color: C.ink4, fontSize: 9, fontWeight: "700", fontFamily: MONO, letterSpacing: 0.5, marginBottom: 2 } as const,
+  filterDateVal:   { color: C.ink2, fontSize: 12, fontWeight: "600" },
+  filterDropBtn:   { paddingHorizontal: 12, paddingVertical: 7, borderRadius: R.md, borderWidth: 1, borderColor: C.line, backgroundColor: C.surface, minWidth: 90 },
+  filterDropLabel: { color: C.ink4, fontSize: 9, fontWeight: "700", fontFamily: MONO, letterSpacing: 0.5, marginBottom: 2 } as const,
+  filterDropVal:   { color: C.ink2, fontSize: 12, fontWeight: "600" },
+  filterClearBtn:  { flexDirection: "row", alignItems: "center", gap: 4, paddingHorizontal: 10, paddingVertical: 7, borderRadius: R.md, borderWidth: 1, borderColor: `${C.bad}44`, backgroundColor: `${C.bad}0d` } as const,
+  filterClearTxt:  { color: C.bad, fontSize: 11, fontWeight: "600" },
+
+  paginationBar:        { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: 14, paddingVertical: 8, borderTopWidth: 1, borderTopColor: C.line, backgroundColor: C.bg2, flexShrink: 0 } as const,
+  paginationInfo:       { color: C.ink4, fontSize: 11, fontFamily: MONO },
+  paginationBtns:       { flexDirection: "row", alignItems: "center", gap: 8 } as const,
+  paginationBtn:        { flexDirection: "row", alignItems: "center", gap: 4, paddingHorizontal: 12, paddingVertical: 6, borderRadius: R.md, borderWidth: 1, borderColor: C.line, backgroundColor: C.surface } as const,
+  paginationBtnDisabled:{ opacity: 0.4 },
+  paginationBtnTxt:     { color: C.ink2, fontSize: 12, fontWeight: "600" },
+  paginationPage:       { color: C.ink3, fontSize: 12, fontFamily: MONO, paddingHorizontal: 6 },
+
+  stayDatesLabelRow: { paddingHorizontal: 14, paddingTop: 10, paddingBottom: 2, backgroundColor: C.bg2 },
+  stayDatesLabel:    { color: C.ink4, fontSize: 10, fontWeight: "700", fontFamily: MONO, letterSpacing: 1.0 },
+  stayDatesRow:      { flexDirection: "row", alignItems: "center", flexWrap: "wrap", paddingHorizontal: 10, paddingBottom: 10, borderBottomWidth: 1, borderBottomColor: C.line, backgroundColor: C.bg2, gap: 8, flexShrink: 0 } as const,
+  stayDateField:     { paddingHorizontal: 12, paddingVertical: 8, borderRadius: R.md, borderWidth: 1, borderColor: `${C.amber}44`, backgroundColor: `${C.amber}0d` },
+  stayDateFieldLbl:  { color: C.amber, fontSize: 13, fontWeight: "700" },
+  stayDatesArrow:    { color: C.ink4, fontSize: 16 },
+  stayNightCount:    { color: C.ink3, fontSize: 12, fontFamily: MONO },
+  stayPickDatesBtn:  { flexDirection: "row", alignItems: "center", gap: 5, paddingHorizontal: 12, paddingVertical: 8, borderRadius: R.md, borderWidth: 1, borderColor: `${C.amber}44`, backgroundColor: `${C.amber}12` } as const,
+  stayPickDatesBtnTxt: { color: C.amber, fontSize: 12, fontWeight: "700" },
+
+  sectionLabelRow: { paddingHorizontal: 14, paddingTop: 8, paddingBottom: 4 },
+  sectionLabel:    { color: C.ink4, fontSize: 10, fontWeight: "700", fontFamily: MONO, letterSpacing: 1.0 },
+
+  availHint: { color: C.ink4, fontSize: 11, textAlign: "center", paddingHorizontal: 20, paddingTop: 6, paddingBottom: 24, fontStyle: "italic" } as const,
+
+  overlayBd:      { flex: 1, backgroundColor: "rgba(0,0,0,0.6)", justifyContent: "center", alignItems: "center" },
+  centeredOverlay:{ flex: 1, backgroundColor: "rgba(0,0,0,0.6)", justifyContent: "center", alignItems: "center", padding: 24 },
+
+  successSheet:      { backgroundColor: C.bg2, borderRadius: R.xl, padding: 24, margin: 24, alignItems: "center", gap: 14 },
+  successIconWrap:   { width: 72, height: 72, borderRadius: 36, alignItems: "center", justifyContent: "center" },
+  successTitle:      { color: C.ink, fontSize: 20, fontWeight: "800", textAlign: "center" },
+  successDetails:    { alignSelf: "stretch", gap: 8, backgroundColor: C.surface, borderRadius: R.lg, padding: 14 },
+  successRow:        { flexDirection: "row", alignItems: "center", gap: 8 },
+  successDetailTxt:  { color: C.ink2, fontSize: 13, flex: 1 },
+  successStatusBadge:{ paddingHorizontal: 16, paddingVertical: 6, borderRadius: R.full, borderWidth: 1 },
+  successStatusTxt:  { fontSize: 11, fontWeight: "700", fontFamily: MONO, letterSpacing: 0.8 },
+  successDoneBtn:    { alignSelf: "stretch", paddingVertical: 14, borderRadius: R.lg, alignItems: "center", justifyContent: "center", flexDirection: "row", gap: 7, backgroundColor: C.surface, borderWidth: 1, borderColor: C.line },
+  successDoneBtnTxt: { color: C.ink2, fontSize: 15, fontWeight: "600" },
+
+  alertSheet:    { backgroundColor: C.bg2, borderRadius: R.xl, padding: 24, margin: 24, alignItems: "center", gap: 12 },
+  alertIconWrap: { width: 60, height: 60, borderRadius: 30, backgroundColor: `${C.bad}18`, alignItems: "center", justifyContent: "center" },
+  alertTitle:    { color: C.ink, fontSize: 17, fontWeight: "700" },
+  alertBody:     { color: C.ink3, fontSize: 13, textAlign: "center", lineHeight: 20 },
+  alertActions:  { flexDirection: "row", gap: 10, alignSelf: "stretch", marginTop: 4 },
+  alertKeepBtn:  { flex: 1, paddingVertical: 12, borderRadius: R.lg, alignItems: "center", backgroundColor: C.surface, borderWidth: 1, borderColor: C.line },
+  alertKeepTxt:  { color: C.ink2, fontSize: 14, fontWeight: "600" },
+  alertCancelBtn:{ flex: 1, paddingVertical: 12, borderRadius: R.lg, alignItems: "center", backgroundColor: `${C.bad}22`, borderWidth: 1, borderColor: `${C.bad}44` },
+  alertCancelTxt:{ color: C.bad, fontSize: 14, fontWeight: "700" },
+});
+
+export type StyleMap = ReturnType<typeof makeStyles>;

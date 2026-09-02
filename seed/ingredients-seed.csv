@@ -1,0 +1,142 @@
+name,unit,cost,stock,threshold
+Espresso Blend Beans,gram,0,0,0
+Arabica Blend Beans,gram,0,0,0
+Barako Blend Beans,gram,0,0,0
+Benguet Blend Beans,gram,0,0,0
+Kalinga Blend Beans,gram,0,0,0
+Robusta Quezon Beans,gram,0,0,0
+Liberica Indonesia Beans,gram,0,0,0
+Arabica Mt. Matutum Beans,gram,0,0,0
+Excelsa Amadeo Beans,gram,0,0,0
+Ground Coffee Filter,pcs,0,0,0
+Fresh Milk,ml,0,0,0
+Oat Milk,ml,0,0,0
+Soy Milk,ml,0,0,0
+Non-Dairy Milk,ml,0,0,0
+Creamer,gram,0,0,0
+Whipped Cream,gram,0,0,0
+Condensed Milk,ml,0,0,0
+Sea Salt Cream,ml,0,0,0
+Chocolate Sauce,ml,0,0,0
+Caramel Sauce,ml,0,0,0
+Sugar Syrup,ml,0,0,0
+Honey,ml,0,0,0
+Lemon Juice,ml,0,0,0
+Soda Water,ml,0,0,0
+Ice,gram,0,0,0
+Hot Cup,pcs,0,0,0
+Cold Cup,pcs,0,0,0
+Cup Lid,pcs,0,0,0
+Straw,pcs,0,0,0
+Sealing Film,pcs,0,0,0
+Napkin,pcs,0,0,0
+Coffee Jelly,gram,0,0,0
+Tapioca Pearls,gram,0,0,0
+Chocolate Chips,gram,0,0,0
+Oreo Crumbs,gram,0,0,0
+Cheesecake Bits,gram,0,0,0
+Graham Crumbs,gram,0,0,0
+Mango Puree,ml,0,0,0
+Strawberry Puree,ml,0,0,0
+Blueberry Syrup,ml,0,0,0
+Green Apple Syrup,ml,0,0,0
+Passion Fruit Syrup,ml,0,0,0
+Lychee Syrup,ml,0,0,0
+Lemon Syrup,ml,0,0,0
+Cucumber,gram,0,0,0
+Ginger,gram,0,0,0
+Brown Sugar,gram,0,0,0
+White Sugar,gram,0,0,0
+Cinnamon Powder,gram,0,0,0
+Matcha Powder,gram,0,0,0
+Milk Tea Base Powder,gram,0,0,0
+Black Tea Leaves,gram,0,0,0
+Taro Powder,gram,0,0,0
+Wintermelon Syrup,ml,0,0,0
+Okinawa Syrup,ml,0,0,0
+Dark Chocolate Powder,gram,0,0,0
+Black Forest Syrup,ml,0,0,0
+Frappe Base Powder,gram,0,0,0
+Blueberry Frappe Powder,gram,0,0,0
+Caramel Frappe Syrup,ml,0,0,0
+Caramel Toffee Syrup,ml,0,0,0
+Chocolate Chip Frappe Powder,gram,0,0,0
+Cheesecake Frappe Powder,gram,0,0,0
+Cookies and Cream Powder,gram,0,0,0
+Dark Mocha Powder,gram,0,0,0
+White Rabbit Powder,gram,0,0,0
+Java Chip Powder,gram,0,0,0
+Roasted Almond Syrup,ml,0,0,0
+Hazelnut Syrup,ml,0,0,0
+French Vanilla Syrup,ml,0,0,0
+Dalgona Coffee Powder,gram,0,0,0
+Rice,gram,0,0,0
+Garlic,gram,0,0,0
+Onion,gram,0,0,0
+Tomato,gram,0,0,0
+Egg,pcs,0,0,0
+Cooking Oil,ml,0,0,0
+Butter,gram,0,0,0
+Salt,gram,0,0,0
+Black Pepper,gram,0,0,0
+Soy Sauce,ml,0,0,0
+Vinegar,ml,0,0,0
+Fish Sauce,ml,0,0,0
+Bagoong,gram,0,0,0
+Tamarind Mix,gram,0,0,0
+Coconut Milk,ml,0,0,0
+Peanut Sauce,gram,0,0,0
+Caldereta Sauce,gram,0,0,0
+Tomato Sauce,gram,0,0,0
+Mayonnaise,gram,0,0,0
+Cheese Sauce,gram,0,0,0
+Sour Cream,gram,0,0,0
+Mozzarella Cheese,gram,0,0,0
+Cheddar Cheese,gram,0,0,0
+Parmesan Cheese,gram,0,0,0
+Blue Cheese,gram,0,0,0
+Pizza Dough,pcs,0,0,0
+Pizza Sauce,gram,0,0,0
+Pepperoni,gram,0,0,0
+Ham,gram,0,0,0
+Pineapple Tidbits,gram,0,0,0
+Bacon,gram,0,0,0
+French Fries,gram,0,0,0
+Nacho Chips,gram,0,0,0
+Tortilla Wrapper,pcs,0,0,0
+Lumpia Wrapper,pcs,0,0,0
+Flour,gram,0,0,0
+Bread Crumbs,gram,0,0,0
+Corn Kernels,gram,0,0,0
+Mango,gram,0,0,0
+Green Chili,gram,0,0,0
+String Beans,gram,0,0,0
+Eggplant,gram,0,0,0
+Pechay,gram,0,0,0
+Cabbage,gram,0,0,0
+Carrot,gram,0,0,0
+Potato,gram,0,0,0
+Mashed Potato Mix,gram,0,0,0
+Truffle Oil,ml,0,0,0
+Pork Belly,gram,0,0,0
+Pork Leg,gram,0,0,0
+Pork Sisig Meat,gram,0,0,0
+Pork BBQ Cut,gram,0,0,0
+Chicken Fillet,gram,0,0,0
+Chicken BBQ Cut,gram,0,0,0
+Hungarian Sausage,gram,0,0,0
+Beef Tapa,gram,0,0,0
+Beef Ribs,gram,0,0,0
+Beef Caldereta Cut,gram,0,0,0
+Beef Shank,gram,0,0,0
+Bangus,gram,0,0,0
+Salmon Steak,gram,0,0,0
+Squid,gram,0,0,0
+Calamari Rings,gram,0,0,0
+Shrimp,gram,0,0,0
+Pancit Canton Noodles,gram,0,0,0
+Pancit Bihon Noodles,gram,0,0,0
+Chicken Stock,ml,0,0,0
+Beef Stock,ml,0,0,0
+Coconut Water,ml,0,0,0
+Marshmallow Stick,pcs,0,0,0

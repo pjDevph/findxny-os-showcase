@@ -1,0 +1,624 @@
+<title>Excel Templates — FINDXNY OS</title>
+<style>
+:root {
+  --bg:      #16130E;
+  --surface: #221E18;
+  --card:    #2D2820;
+  --card2:   #352F26;
+  --accent:  #DFA020;
+  --text:    #F0E8D8;
+  --muted:   #8A7D6C;
+  --line:    #3A322A;
+  --mono:    'Cascadia Code','SF Mono','Fira Code','Consolas','Courier New',monospace;
+  --sans:    system-ui,-apple-system,'Segoe UI',sans-serif;
+  --blue:    #50A0C8;
+  --green:   #50B450;
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg:#F7F2EB; --surface:#FFFFFF; --card:#EDE6DA; --card2:#E6DDD0;
+    --accent:#B87D0A; --text:#1C1610; --muted:#7A6E5C; --line:#D8CEBE;
+    --blue:#1A7AAF; --green:#2E7A28;
+  }
+}
+:root[data-theme="dark"] {
+  --bg:#16130E;--surface:#221E18;--card:#2D2820;--card2:#352F26;
+  --accent:#DFA020;--text:#F0E8D8;--muted:#8A7D6C;--line:#3A322A;--blue:#50A0C8;--green:#50B450;
+}
+:root[data-theme="light"] {
+  --bg:#F7F2EB;--surface:#FFFFFF;--card:#EDE6DA;--card2:#E6DDD0;
+  --accent:#B87D0A;--text:#1C1610;--muted:#7A6E5C;--line:#D8CEBE;--blue:#1A7AAF;--green:#2E7A28;
+}
+
+*,*::before,*::after { box-sizing:border-box; margin:0; padding:0; }
+body { font-family:var(--sans); background:var(--bg); color:var(--text); line-height:1.55; font-size:14px; min-height:100vh; }
+@media (prefers-reduced-motion:reduce) { * { transition:none !important; } }
+
+.page { max-width:900px; margin:0 auto; padding:32px 20px 64px; }
+
+.hdr {
+  display:flex; align-items:baseline; justify-content:space-between;
+  border-bottom:1px solid var(--line); padding-bottom:16px; margin-bottom:28px;
+  flex-wrap:wrap; gap:10px;
+}
+.logo { font-family:var(--mono); font-size:11px; letter-spacing:.12em; color:var(--accent); font-weight:600; text-transform:uppercase; }
+.hdr-left { display:flex; align-items:baseline; gap:14px; }
+.hdr-title { font-size:22px; font-weight:700; letter-spacing:-.02em; }
+.hdr-sub { font-size:12px; color:var(--muted); letter-spacing:.04em; }
+.theme-btn {
+  background:var(--card); border:1px solid var(--line); color:var(--muted);
+  border-radius:6px; padding:5px 12px; font-size:12px; cursor:pointer; font-family:var(--sans);
+  transition:border-color .15s,color .15s;
+}
+.theme-btn:hover { border-color:var(--accent); color:var(--accent); }
+.theme-btn:focus-visible { outline:2px solid var(--accent); outline-offset:2px; }
+
+/* Category input */
+.cat-section {
+  background:var(--surface); border:1px solid var(--line); border-radius:10px;
+  padding:20px; margin-bottom:24px;
+}
+.cat-label {
+  font-family:var(--mono); font-size:10px; letter-spacing:.12em; text-transform:uppercase;
+  color:var(--accent); font-weight:600; margin-bottom:8px; display:block;
+}
+.cat-desc { font-size:12px; color:var(--muted); margin-bottom:12px; }
+.cat-wrap { display:grid; grid-template-columns:1fr auto; gap:12px; align-items:start; }
+textarea {
+  background:var(--card); border:1px solid var(--line); border-radius:6px;
+  color:var(--text); font-family:var(--mono); font-size:12.5px; line-height:1.7;
+  padding:10px 12px; resize:vertical; min-height:130px; width:100%;
+  outline:none; transition:border-color .15s;
+}
+textarea:focus { border-color:var(--accent); }
+.cat-hint {
+  font-size:11px; color:var(--muted); line-height:1.5; max-width:200px;
+  padding-top:4px;
+}
+.cat-hint strong { color:var(--text); font-weight:600; display:block; margin-bottom:4px; }
+
+/* Panels */
+.panels { display:grid; grid-template-columns:1fr 1fr; gap:20px; align-items:start; }
+@media (max-width:640px) { .panels { grid-template-columns:1fr; } .cat-wrap { grid-template-columns:1fr; } }
+
+.panel { background:var(--surface); border:1px solid var(--line); border-radius:10px; overflow:hidden; }
+.panel-head {
+  padding:14px 20px 12px; border-bottom:1px solid var(--line);
+  display:flex; align-items:center; justify-content:space-between; gap:10px;
+}
+.panel-title { font-size:14px; font-weight:700; }
+.panel-tag {
+  font-family:var(--mono); font-size:9px; letter-spacing:.1em; padding:3px 8px;
+  border-radius:4px; font-weight:600; text-transform:uppercase;
+}
+.tag-product { background:rgba(223,160,32,.12); color:var(--accent); }
+.tag-room    { background:rgba(80,160,200,.12); color:var(--blue); }
+
+.col-list { padding:14px 20px 0; display:flex; flex-direction:column; gap:0; }
+.col-row {
+  display:grid; grid-template-columns:auto 1fr auto;
+  align-items:center; gap:8px; padding:6px 0;
+  border-bottom:1px solid var(--line);
+}
+.col-row:last-child { border-bottom:none; }
+.col-letter {
+  font-family:var(--mono); font-size:9px; color:var(--muted); width:16px;
+  letter-spacing:.04em;
+}
+.col-name { font-family:var(--mono); font-size:12px; color:var(--text); }
+.col-badge {
+  font-family:var(--mono); font-size:9px; letter-spacing:.06em; padding:2px 7px;
+  border-radius:3px; text-transform:uppercase; font-weight:600;
+}
+.cb-req  { background:rgba(223,160,32,.12); color:var(--accent); border:1px solid rgba(223,160,32,.2); }
+.cb-drop { background:rgba(80,160,200,.10); color:var(--blue);   border:1px solid rgba(80,160,200,.2); }
+.cb-opt  { background:var(--card); color:var(--muted); border:1px solid var(--line); }
+.cb-num  { background:rgba(80,180,80,.10); color:var(--green);  border:1px solid rgba(80,180,80,.2); }
+
+.dl-btn {
+  display:block; width:calc(100% - 40px); margin:16px 20px;
+  background:var(--accent); border:none; border-radius:8px; color:#1a1410;
+  font-family:var(--sans); font-size:13px; font-weight:700; cursor:pointer;
+  padding:11px 0; letter-spacing:.02em; transition:opacity .15s, transform .1s;
+  text-align:center;
+}
+.dl-btn:hover { opacity:.88; }
+.dl-btn:active { transform:scale(.98); }
+.dl-btn:focus-visible { outline:2px solid var(--accent); outline-offset:3px; }
+.dl-btn.room { background:var(--card2); color:var(--blue); border:1px solid rgba(80,160,200,.3); }
+.dl-btn.room:focus-visible { outline-color:var(--blue); }
+
+.note {
+  margin-top:24px; padding:13px 16px; background:var(--surface);
+  border:1px solid var(--line); border-radius:8px; font-size:12px;
+  color:var(--muted); line-height:1.65;
+}
+.note strong { color:var(--text); }
+.note code { font-family:var(--mono); font-size:10.5px; background:var(--card2); padding:1px 5px; border-radius:3px; color:var(--text); }
+</style>
+
+<div class="page">
+
+  <header class="hdr">
+    <div class="hdr-left">
+      <span class="logo">FINDXNY OS</span>
+      <h1 class="hdr-title">Excel Templates</h1>
+      <span class="hdr-sub">Products &amp; Rooms</span>
+    </div>
+    <button class="theme-btn" onclick="toggleTheme()">Toggle theme</button>
+  </header>
+
+  <!-- Category input (shared by both templates) -->
+  <div class="cat-section">
+    <label class="cat-label" for="cats">Product Categories</label>
+    <p class="cat-desc">These become the dropdown options in the <strong>category</strong> column of the Product template. One per line.</p>
+    <div class="cat-wrap">
+      <textarea id="cats" spellcheck="false">Food
+Drinks
+Pastry &amp; Breads
+Snacks
+Specials
+Add-ons
+Packages
+Alcohol</textarea>
+      <div class="cat-hint">
+        <strong>Editable in Excel too</strong>
+        After downloading, open the <code>_Lists</code> sheet to add or remove categories. The dropdown updates automatically.
+      </div>
+    </div>
+  </div>
+
+  <div class="panels">
+
+    <!-- Product template -->
+    <div class="panel">
+      <div class="panel-head">
+        <span class="panel-title">Product Template</span>
+        <span class="panel-tag tag-product">14 columns</span>
+      </div>
+      <div class="col-list">
+        <div class="col-row"><span class="col-letter">A</span><span class="col-name">name</span><span class="col-badge cb-req">Required</span></div>
+        <div class="col-row"><span class="col-letter">B</span><span class="col-name">category</span><span class="col-badge cb-drop">Dropdown ▾</span></div>
+        <div class="col-row"><span class="col-letter">C</span><span class="col-name">selling_price</span><span class="col-badge cb-num">Number</span></div>
+        <div class="col-row"><span class="col-letter">D</span><span class="col-name">stock_behavior</span><span class="col-badge cb-drop">Dropdown ▾</span></div>
+        <div class="col-row"><span class="col-letter">E</span><span class="col-name">print_station</span><span class="col-badge cb-drop">Dropdown ▾</span></div>
+        <div class="col-row"><span class="col-letter">F</span><span class="col-name">active</span><span class="col-badge cb-drop">Dropdown ▾</span></div>
+        <div class="col-row"><span class="col-letter">G</span><span class="col-name">for_sale</span><span class="col-badge cb-drop">Dropdown ▾</span></div>
+        <div class="col-row"><span class="col-letter">H</span><span class="col-name">is_pinned</span><span class="col-badge cb-drop">Dropdown ▾</span></div>
+        <div class="col-row"><span class="col-letter">I</span><span class="col-name">featured</span><span class="col-badge cb-drop">Dropdown ▾</span></div>
+        <div class="col-row"><span class="col-letter">J</span><span class="col-name">sku</span><span class="col-badge cb-opt">Optional</span></div>
+        <div class="col-row"><span class="col-letter">K</span><span class="col-name">barcode</span><span class="col-badge cb-opt">Optional</span></div>
+        <div class="col-row"><span class="col-letter">L</span><span class="col-name">description</span><span class="col-badge cb-opt">Optional</span></div>
+        <div class="col-row"><span class="col-letter">M</span><span class="col-name">image_url</span><span class="col-badge cb-opt">Optional</span></div>
+        <div class="col-row"><span class="col-letter">N</span><span class="col-name">notes</span><span class="col-badge cb-opt">Optional</span></div>
+      </div>
+      <button class="dl-btn" onclick="downloadProduct()">↓ Download Product Template</button>
+    </div>
+
+    <!-- Room template -->
+    <div class="panel">
+      <div class="panel-head">
+        <span class="panel-title">Room / Amenity Template</span>
+        <span class="panel-tag tag-room">7 columns</span>
+      </div>
+      <div class="col-list">
+        <div class="col-row"><span class="col-letter">A</span><span class="col-name">type</span><span class="col-badge cb-drop">Dropdown ▾</span></div>
+        <div class="col-row"><span class="col-letter">B</span><span class="col-name">name</span><span class="col-badge cb-req">Required</span></div>
+        <div class="col-row"><span class="col-letter">C</span><span class="col-name">rate_per_hour</span><span class="col-badge cb-num">Number</span></div>
+        <div class="col-row"><span class="col-letter">D</span><span class="col-name">capacity</span><span class="col-badge cb-opt">Optional</span></div>
+        <div class="col-row"><span class="col-letter">E</span><span class="col-name">nightly_rate</span><span class="col-badge cb-num">Number</span></div>
+        <div class="col-row"><span class="col-letter">F</span><span class="col-name">branch</span><span class="col-badge cb-opt">Optional</span></div>
+        <div class="col-row"><span class="col-letter">G</span><span class="col-name">notes</span><span class="col-badge cb-opt">Optional</span></div>
+      </div>
+      <button class="dl-btn room" onclick="downloadRoom()">↓ Download Room Template</button>
+    </div>
+
+  </div>
+
+  <div class="note">
+    <strong>Dropdowns work by referencing the <code>_Lists</code> sheet</strong> included in each file. Edit that sheet to customize categories or option values. The dropdown in column B (category) reflects whatever is in <code>_Lists!A2:A…</code> — add new categories there and they appear in the dropdown immediately without re-downloading.
+  </div>
+
+</div>
+
+<script>
+// ──────────────────────────────────────────────────────────
+// CRC32
+// ──────────────────────────────────────────────────────────
+const CRC_TBL = (function() {
+  const t = new Uint32Array(256);
+  for (let i = 0; i < 256; i++) {
+    let c = i;
+    for (let j = 0; j < 8; j++) c = (c & 1) ? (0xEDB88320 ^ (c >>> 1)) : (c >>> 1);
+    t[i] = c;
+  }
+  return t;
+})();
+
+function crc32(buf) {
+  let c = 0xFFFFFFFF;
+  for (let i = 0; i < buf.length; i++) c = CRC_TBL[(c ^ buf[i]) & 0xFF] ^ (c >>> 8);
+  return (c ^ 0xFFFFFFFF) >>> 0;
+}
+
+// ──────────────────────────────────────────────────────────
+// Byte helpers
+// ──────────────────────────────────────────────────────────
+const enc = new TextEncoder();
+const u16 = n => new Uint8Array([n & 0xFF, (n >> 8) & 0xFF]);
+const u32 = n => new Uint8Array([n & 0xFF, (n >> 8) & 0xFF, (n >> 16) & 0xFF, (n >> 24) & 0xFF]);
+function cat() {
+  const args = Array.from(arguments);
+  let len = 0;
+  for (const a of args) len += a.length;
+  const r = new Uint8Array(len);
+  let p = 0;
+  for (const a of args) { r.set(a, p); p += a.length; }
+  return r;
+}
+function str(s) { return enc.encode(s); }
+
+// ──────────────────────────────────────────────────────────
+// ZIP (stored, no compression)
+// ──────────────────────────────────────────────────────────
+function makeZip(files) {
+  const entries = files.map(function(f) {
+    const name = enc.encode(f.name);
+    const data = typeof f.data === 'string' ? enc.encode(f.data) : f.data;
+    const crc = crc32(data);
+    return { name: name, data: data, crc: crc, size: data.length };
+  });
+
+  const localChunks = [];
+  const offsets = [];
+  let pos = 0;
+
+  for (const e of entries) {
+    offsets.push(pos);
+    const lh = cat(
+      new Uint8Array([0x50,0x4B,0x03,0x04]),
+      u16(20), u16(0), u16(0),
+      u16(0), u16(0),
+      u32(e.crc), u32(e.size), u32(e.size),
+      u16(e.name.length), u16(0)
+    );
+    const chunk = cat(lh, e.name, e.data);
+    localChunks.push(chunk);
+    pos += chunk.length;
+  }
+
+  const cdParts = [];
+  for (let i = 0; i < entries.length; i++) {
+    const e = entries[i];
+    const cd = cat(
+      new Uint8Array([0x50,0x4B,0x01,0x02]),
+      u16(0x031E), u16(20), u16(0), u16(0),
+      u16(0), u16(0),
+      u32(e.crc), u32(e.size), u32(e.size),
+      u16(e.name.length), u16(0), u16(0),
+      u16(0), u16(0), u32(0),
+      u32(offsets[i])
+    );
+    cdParts.push(cat(cd, e.name));
+  }
+
+  const cdData = cat.apply(null, cdParts);
+  const eocd = cat(
+    new Uint8Array([0x50,0x4B,0x05,0x06]),
+    u16(0), u16(0),
+    u16(entries.length), u16(entries.length),
+    u32(cdData.length), u32(pos),
+    u16(0)
+  );
+
+  const allChunks = localChunks.concat([cdData, eocd]);
+  return cat.apply(null, allChunks);
+}
+
+// ──────────────────────────────────────────────────────────
+// XML helpers
+// ──────────────────────────────────────────────────────────
+function xe(s) {
+  return String(s)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
+
+function hdr(col, label) {
+  return '<c r="' + col + '1" s="1" t="inlineStr"><is><t>' + xe(label) + '</t></is></c>';
+}
+
+function cell(ref, val, style) {
+  var s = style ? ' s="' + style + '"' : '';
+  return '<c r="' + ref + '"' + s + ' t="inlineStr"><is><t>' + xe(val) + '</t></is></c>';
+}
+
+// ──────────────────────────────────────────────────────────
+// XLSX parts
+// ──────────────────────────────────────────────────────────
+function contentTypes(sheets) {
+  var overrides = sheets.map(function(s) {
+    return '<Override PartName="/xl/worksheets/' + s + '" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml"/>';
+  }).join('');
+  return '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>' +
+    '<Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types">' +
+    '<Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/>' +
+    '<Default Extension="xml" ContentType="application/xml"/>' +
+    '<Override PartName="/xl/workbook.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet.main+xml"/>' +
+    overrides +
+    '<Override PartName="/xl/styles.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.styles+xml"/>' +
+    '</Types>';
+}
+
+var RELS = '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>' +
+  '<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">' +
+  '<Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="xl/workbook.xml"/>' +
+  '</Relationships>';
+
+function workbook(sheetDefs) {
+  var sheets = sheetDefs.map(function(s, i) {
+    var state = s.hidden ? ' state="hidden"' : '';
+    return '<sheet name="' + xe(s.name) + '" sheetId="' + (i+1) + '" r:id="rId' + (i+1) + '"' + state + '/>';
+  }).join('');
+  return '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>' +
+    '<workbook xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main"' +
+    ' xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships">' +
+    '<bookViews><workbookView activeTab="0"/></bookViews>' +
+    '<sheets>' + sheets + '</sheets>' +
+    '</workbook>';
+}
+
+function workbookRels(count) {
+  var rels = '';
+  for (var i = 1; i <= count; i++) {
+    rels += '<Relationship Id="rId' + i + '" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet" Target="worksheets/sheet' + i + '.xml"/>';
+  }
+  rels += '<Relationship Id="rId' + (count+1) + '" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles" Target="styles.xml"/>';
+  return '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>' +
+    '<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">' + rels + '</Relationships>';
+}
+
+var STYLES = '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>' +
+  '<styleSheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main">' +
+  '<fonts count="2">' +
+    '<font><sz val="11"/><name val="Calibri"/></font>' +
+    '<font><b/><sz val="11"/><color rgb="FF1A1410"/><name val="Calibri"/></font>' +
+  '</fonts>' +
+  '<fills count="3">' +
+    '<fill><patternFill patternType="none"/></fill>' +
+    '<fill><patternFill patternType="gray125"/></fill>' +
+    '<fill><patternFill patternType="solid"><fgColor rgb="FFDFA020"/></patternFill></fill>' +
+  '</fills>' +
+  '<borders count="2">' +
+    '<border><left/><right/><top/><bottom/><diagonal/></border>' +
+    '<border>' +
+      '<left style="thin"><color rgb="FFB0A090"/></left>' +
+      '<right style="thin"><color rgb="FFB0A090"/></right>' +
+      '<top style="thin"><color rgb="FFB0A090"/></top>' +
+      '<bottom style="thin"><color rgb="FFB0A090"/></bottom>' +
+      '<diagonal/>' +
+    '</border>' +
+  '</borders>' +
+  '<cellStyleXfs count="1"><xf numFmtId="0" fontId="0" fillId="0" borderId="0"/></cellStyleXfs>' +
+  '<cellXfs count="2">' +
+    '<xf numFmtId="0" fontId="0" fillId="0" borderId="0" xfId="0"/>' +
+    '<xf numFmtId="0" fontId="1" fillId="2" borderId="1" xfId="0" applyFont="1" applyFill="1" applyBorder="1"/>' +
+  '</cellXfs>' +
+  '</styleSheet>';
+
+// ──────────────────────────────────────────────────────────
+// Products sheet
+// ──────────────────────────────────────────────────────────
+function productsSheet(catCount) {
+  var catEnd = catCount + 1; // row 2 = first cat, so last row = catCount + 1
+
+  var headers =
+    hdr('A','name') + hdr('B','category') + hdr('C','selling_price') +
+    hdr('D','stock_behavior') + hdr('E','print_station') +
+    hdr('F','active') + hdr('G','for_sale') + hdr('H','is_pinned') + hdr('I','featured') +
+    hdr('J','sku') + hdr('K','barcode') + hdr('L','description') +
+    hdr('M','image_url') + hdr('N','notes');
+
+  var dv =
+    '<dataValidations count="4">' +
+      '<dataValidation type="list" sqref="B2:B50000" showErrorMessage="1" errorTitle="Invalid" error="Select a category from the list.">' +
+        '<formula1>_Lists!$A$2:$A$' + catEnd + '</formula1>' +
+      '</dataValidation>' +
+      '<dataValidation type="list" sqref="D2:D50000" showErrorMessage="1">' +
+        '<formula1>_Lists!$B$2:$B$4</formula1>' +
+      '</dataValidation>' +
+      '<dataValidation type="list" sqref="E2:E50000" showErrorMessage="1">' +
+        '<formula1>_Lists!$C$2:$C$5</formula1>' +
+      '</dataValidation>' +
+      '<dataValidation type="list" sqref="F2:I50000" showErrorMessage="1">' +
+        '<formula1>_Lists!$D$2:$D$3</formula1>' +
+      '</dataValidation>' +
+    '</dataValidations>';
+
+  return '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>' +
+    '<worksheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main">' +
+    '<sheetViews><sheetView workbookViewId="0">' +
+      '<pane ySplit="1" topLeftCell="A2" activePane="bottomLeft" state="frozen"/>' +
+      '<selection pane="bottomLeft" activeCell="A2" sqref="A2"/>' +
+    '</sheetView></sheetViews>' +
+    '<sheetFormatPr defaultRowHeight="18"/>' +
+    '<cols>' +
+      '<col min="1" max="1" width="28" customWidth="1"/>' +
+      '<col min="2" max="2" width="22" customWidth="1"/>' +
+      '<col min="3" max="3" width="16" customWidth="1"/>' +
+      '<col min="4" max="4" width="18" customWidth="1"/>' +
+      '<col min="5" max="5" width="16" customWidth="1"/>' +
+      '<col min="6" max="9" width="11" customWidth="1"/>' +
+      '<col min="10" max="11" width="16" customWidth="1"/>' +
+      '<col min="12" max="13" width="36" customWidth="1"/>' +
+      '<col min="14" max="14" width="26" customWidth="1"/>' +
+    '</cols>' +
+    '<sheetData><row r="1" ht="22" customHeight="1">' + headers + '</row></sheetData>' +
+    dv +
+    '<pageMargins left="0.7" right="0.7" top="0.75" bottom="0.75" header="0.3" footer="0.3"/>' +
+    '</worksheet>';
+}
+
+// ──────────────────────────────────────────────────────────
+// Rooms sheet
+// ──────────────────────────────────────────────────────────
+function roomsSheet() {
+  var headers =
+    hdr('A','type') + hdr('B','name') + hdr('C','rate_per_hour') +
+    hdr('D','capacity') + hdr('E','nightly_rate') + hdr('F','branch') + hdr('G','notes');
+
+  var dv =
+    '<dataValidations count="1">' +
+      '<dataValidation type="list" sqref="A2:A50000" showErrorMessage="1">' +
+        '<formula1>_Lists!$E$2:$E$3</formula1>' +
+      '</dataValidation>' +
+    '</dataValidations>';
+
+  return '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>' +
+    '<worksheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main">' +
+    '<sheetViews><sheetView workbookViewId="0">' +
+      '<pane ySplit="1" topLeftCell="A2" activePane="bottomLeft" state="frozen"/>' +
+      '<selection pane="bottomLeft" activeCell="A2" sqref="A2"/>' +
+    '</sheetView></sheetViews>' +
+    '<sheetFormatPr defaultRowHeight="18"/>' +
+    '<cols>' +
+      '<col min="1" max="1" width="14" customWidth="1"/>' +
+      '<col min="2" max="2" width="28" customWidth="1"/>' +
+      '<col min="3" max="3" width="18" customWidth="1"/>' +
+      '<col min="4" max="4" width="14" customWidth="1"/>' +
+      '<col min="5" max="5" width="16" customWidth="1"/>' +
+      '<col min="6" max="6" width="20" customWidth="1"/>' +
+      '<col min="7" max="7" width="26" customWidth="1"/>' +
+    '</cols>' +
+    '<sheetData><row r="1" ht="22" customHeight="1">' + headers + '</row></sheetData>' +
+    dv +
+    '<pageMargins left="0.7" right="0.7" top="0.75" bottom="0.75" header="0.3" footer="0.3"/>' +
+    '</worksheet>';
+}
+
+// ──────────────────────────────────────────────────────────
+// _Lists sheet  (visible, user-editable)
+// ──────────────────────────────────────────────────────────
+function listsSheet(categories) {
+  var rows = '';
+
+  // Header row
+  rows += '<row r="1" ht="20" customHeight="1">' +
+    hdr('A','Categories') + hdr('B','Stock Behavior') + hdr('C','Print Station') +
+    hdr('D','Active / For Sale') + hdr('E','Resource Type') +
+    '</row>';
+
+  // Fixed options
+  var stockOpts = ['none','recipe','inventory'];
+  var printOpts = ['none','kitchen','drinks','counter'];
+  var boolOpts  = ['TRUE','FALSE'];
+  var typeOpts  = ['room','amenity'];
+
+  var maxRows = Math.max(categories.length, stockOpts.length, printOpts.length, boolOpts.length, typeOpts.length);
+
+  for (var i = 0; i < maxRows; i++) {
+    var r = i + 2;
+    var rowCells = '';
+    if (i < categories.length) rowCells += cell('A'+r, categories[i]);
+    if (i < stockOpts.length)  rowCells += cell('B'+r, stockOpts[i]);
+    if (i < printOpts.length)  rowCells += cell('C'+r, printOpts[i]);
+    if (i < boolOpts.length)   rowCells += cell('D'+r, boolOpts[i]);
+    if (i < typeOpts.length)   rowCells += cell('E'+r, typeOpts[i]);
+    if (rowCells) rows += '<row r="' + r + '">' + rowCells + '</row>';
+  }
+
+  return '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>' +
+    '<worksheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main">' +
+    '<sheetViews><sheetView workbookViewId="0">' +
+      '<pane ySplit="1" topLeftCell="A2" activePane="bottomLeft" state="frozen"/>' +
+    '</sheetView></sheetViews>' +
+    '<sheetFormatPr defaultRowHeight="18"/>' +
+    '<cols>' +
+      '<col min="1" max="1" width="24" customWidth="1"/>' +
+      '<col min="2" max="2" width="18" customWidth="1"/>' +
+      '<col min="3" max="3" width="16" customWidth="1"/>' +
+      '<col min="4" max="4" width="18" customWidth="1"/>' +
+      '<col min="5" max="5" width="16" customWidth="1"/>' +
+    '</cols>' +
+    '<sheetData>' + rows + '</sheetData>' +
+    '<pageMargins left="0.7" right="0.7" top="0.75" bottom="0.75" header="0.3" footer="0.3"/>' +
+    '</worksheet>';
+}
+
+// ──────────────────────────────────────────────────────────
+// Build + download
+// ──────────────────────────────────────────────────────────
+function getCategories() {
+  return document.getElementById('cats').value
+    .split('\n')
+    .map(function(s) { return s.trim().replace(/&amp;/g, '&'); })
+    .filter(function(s) { return s.length > 0; });
+}
+
+function download(bytes, filename) {
+  var blob = new Blob([bytes], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
+  var url = URL.createObjectURL(blob);
+  var a = document.createElement('a');
+  a.href = url;
+  a.download = filename;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+function downloadProduct() {
+  var cats = getCategories();
+  if (!cats.length) { alert('Enter at least one category before downloading.'); return; }
+
+  var sheetDefs = [
+    { name: 'Products' },
+    { name: '_Lists' },
+  ];
+
+  var files = [
+    { name: '[Content_Types].xml', data: contentTypes(['sheet1.xml','sheet2.xml']) },
+    { name: '_rels/.rels', data: RELS },
+    { name: 'xl/workbook.xml', data: workbook(sheetDefs) },
+    { name: 'xl/_rels/workbook.xml.rels', data: workbookRels(2) },
+    { name: 'xl/worksheets/sheet1.xml', data: productsSheet(cats.length) },
+    { name: 'xl/worksheets/sheet2.xml', data: listsSheet(cats) },
+    { name: 'xl/styles.xml', data: STYLES },
+  ];
+
+  download(makeZip(files), 'FINDXNY-Products-Template.xlsx');
+}
+
+function downloadRoom() {
+  var cats = getCategories();
+
+  var sheetDefs = [
+    { name: 'Rooms' },
+    { name: '_Lists' },
+  ];
+
+  var files = [
+    { name: '[Content_Types].xml', data: contentTypes(['sheet1.xml','sheet2.xml']) },
+    { name: '_rels/.rels', data: RELS },
+    { name: 'xl/workbook.xml', data: workbook(sheetDefs) },
+    { name: 'xl/_rels/workbook.xml.rels', data: workbookRels(2) },
+    { name: 'xl/worksheets/sheet1.xml', data: roomsSheet() },
+    { name: 'xl/worksheets/sheet2.xml', data: listsSheet(cats) },
+    { name: 'xl/styles.xml', data: STYLES },
+  ];
+
+  download(makeZip(files), 'FINDXNY-Rooms-Template.xlsx');
+}
+
+// ──────────────────────────────────────────────────────────
+function toggleTheme() {
+  var root = document.documentElement;
+  var cur = root.getAttribute('data-theme');
+  var mq  = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  if (!cur) root.setAttribute('data-theme', mq ? 'light' : 'dark');
+  else if (cur === 'dark') root.setAttribute('data-theme', 'light');
+  else root.setAttribute('data-theme', 'dark');
+}
+</script>

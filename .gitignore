@@ -1,0 +1,91 @@
+# dependencies
+node_modules/
+.pnp
+.pnp.js
+
+
+# env files (NEVER commit real keys)
+.env
+.env.local
+.env.*.local
+.env.production
+.env.staging
+.env.development
+!.env.example
+
+# build output
+.next/
+out/
+dist/
+build/
+.gradle/
+.turbo/
+*.tsbuildinfo
+
+# expo
+.expo/
+.expo-shared/
+web-build/
+
+# supabase local state
+supabase/.branches/
+supabase/.temp/
+supabase/.env
+supabase/.env.production
+supabase/.env.staging
+supabase/.env.development
+
+# locally bundled supabase CLI
+tooling/scripts/supabase.exe
+
+# playwright e2e
+apps/web/e2e/.auth/
+apps/web/e2e/.fixtures/
+apps/web/e2e/report/
+apps/web/test-results/
+apps/web/playwright-report/
+
+# logs / system
+*.log
+.DS_Store
+Thumbs.db
+.vscode/*.log
+
+# claude code local config
+.claude/settings.local.json
+.claude/*.lock
+.claude/projects/
+.claude/worktrees/
+.claude/tasks/
+
+# Android build output — same rationale as apps/pos-app/ios/ below.
+# apps/pos-app/android/ is a fully regenerable `expo prebuild` scaffold
+# with no custom native source, so there's no carve-out needed. Scoped to
+# these exact paths (not a bare `android/`) — that used to also match
+# apps/pos-app/modules/*/android/, which DOES hold real custom native
+# source (esc-printer, customer-display) that must stay tracked.
+/android/
+apps/pos-app/android/
+
+# iOS build output — same rationale as android/ above. apps/pos-app/ios/ is a
+# fully regenerable `expo prebuild` scaffold (Pods/, build/, .xcode.env.local)
+# with no custom native source, so unlike android/ there's no carve-out needed.
+apps/pos-app/ios/
+
+# TypeScript incremental build cache
+*.tsbuildinfo
+
+# backup files
+*.bak
+
+# JetBrains IDE
+.idea/
+
+# Supabase CLI cache
+supabase/supabase/.temp/
+
+# Supabase Studio scratch queries
+supabase/snippets/
+
+# SonarQube scanner cache
+.scannerwork/

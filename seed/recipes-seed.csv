@@ -1,0 +1,542 @@
+product,ingredient,qty,unit
+Blueberry Frappe,Cold Cup,1,pcs
+Blueberry Frappe,Cup Lid,1,pcs
+Blueberry Frappe,Straw,1,pcs
+Blueberry Frappe,Ice,180,gram
+Blueberry Frappe,Fresh Milk,120,ml
+Blueberry Frappe,Frappe Base Powder,25,gram
+Blueberry Frappe,Whipped Cream,20,gram
+Blueberry Frappe,Blueberry Frappe Powder,20,gram
+Caramel Frappe,Cold Cup,1,pcs
+Caramel Frappe,Cup Lid,1,pcs
+Caramel Frappe,Straw,1,pcs
+Caramel Frappe,Ice,180,gram
+Caramel Frappe,Fresh Milk,120,ml
+Caramel Frappe,Frappe Base Powder,25,gram
+Caramel Frappe,Whipped Cream,20,gram
+Caramel Frappe,Caramel Frappe Syrup,25,ml
+Caramel Toffee Frappe,Cold Cup,1,pcs
+Caramel Toffee Frappe,Cup Lid,1,pcs
+Caramel Toffee Frappe,Straw,1,pcs
+Caramel Toffee Frappe,Ice,180,gram
+Caramel Toffee Frappe,Fresh Milk,120,ml
+Caramel Toffee Frappe,Frappe Base Powder,25,gram
+Caramel Toffee Frappe,Whipped Cream,20,gram
+Caramel Toffee Frappe,Caramel Toffee Syrup,25,ml
+Chocolate Chip Frappe,Cold Cup,1,pcs
+Chocolate Chip Frappe,Cup Lid,1,pcs
+Chocolate Chip Frappe,Straw,1,pcs
+Chocolate Chip Frappe,Ice,180,gram
+Chocolate Chip Frappe,Fresh Milk,120,ml
+Chocolate Chip Frappe,Frappe Base Powder,25,gram
+Chocolate Chip Frappe,Whipped Cream,20,gram
+Chocolate Chip Frappe,Chocolate Chip Frappe Powder,25,gram
+Cheesecake Frappe,Cold Cup,1,pcs
+Cheesecake Frappe,Cup Lid,1,pcs
+Cheesecake Frappe,Straw,1,pcs
+Cheesecake Frappe,Ice,180,gram
+Cheesecake Frappe,Fresh Milk,120,ml
+Cheesecake Frappe,Frappe Base Powder,25,gram
+Cheesecake Frappe,Whipped Cream,20,gram
+Cheesecake Frappe,Cheesecake Frappe Powder,25,gram
+Coffee Jelly Frappe,Cold Cup,1,pcs
+Coffee Jelly Frappe,Cup Lid,1,pcs
+Coffee Jelly Frappe,Straw,1,pcs
+Coffee Jelly Frappe,Ice,180,gram
+Coffee Jelly Frappe,Fresh Milk,120,ml
+Coffee Jelly Frappe,Frappe Base Powder,25,gram
+Coffee Jelly Frappe,Whipped Cream,20,gram
+Coffee Jelly Frappe,Coffee Jelly,50,gram
+Cookies and Cream Frappe,Cold Cup,1,pcs
+Cookies and Cream Frappe,Cup Lid,1,pcs
+Cookies and Cream Frappe,Straw,1,pcs
+Cookies and Cream Frappe,Ice,180,gram
+Cookies and Cream Frappe,Fresh Milk,120,ml
+Cookies and Cream Frappe,Frappe Base Powder,25,gram
+Cookies and Cream Frappe,Whipped Cream,20,gram
+Cookies and Cream Frappe,Cookies and Cream Powder,25,gram
+Dark Mocha Frappe,Cold Cup,1,pcs
+Dark Mocha Frappe,Cup Lid,1,pcs
+Dark Mocha Frappe,Straw,1,pcs
+Dark Mocha Frappe,Ice,180,gram
+Dark Mocha Frappe,Fresh Milk,120,ml
+Dark Mocha Frappe,Frappe Base Powder,25,gram
+Dark Mocha Frappe,Whipped Cream,20,gram
+Dark Mocha Frappe,Dark Mocha Powder,25,gram
+Strawberry Frappe,Cold Cup,1,pcs
+Strawberry Frappe,Cup Lid,1,pcs
+Strawberry Frappe,Straw,1,pcs
+Strawberry Frappe,Ice,180,gram
+Strawberry Frappe,Fresh Milk,120,ml
+Strawberry Frappe,Frappe Base Powder,25,gram
+Strawberry Frappe,Whipped Cream,20,gram
+Strawberry Frappe,Strawberry Puree,30,ml
+White Rabbit Frappe,Cold Cup,1,pcs
+White Rabbit Frappe,Cup Lid,1,pcs
+White Rabbit Frappe,Straw,1,pcs
+White Rabbit Frappe,Ice,180,gram
+White Rabbit Frappe,Fresh Milk,120,ml
+White Rabbit Frappe,Frappe Base Powder,25,gram
+White Rabbit Frappe,Whipped Cream,20,gram
+White Rabbit Frappe,White Rabbit Powder,25,gram
+Mango Graham Frappe,Cold Cup,1,pcs
+Mango Graham Frappe,Cup Lid,1,pcs
+Mango Graham Frappe,Straw,1,pcs
+Mango Graham Frappe,Ice,180,gram
+Mango Graham Frappe,Fresh Milk,120,ml
+Mango Graham Frappe,Frappe Base Powder,25,gram
+Mango Graham Frappe,Whipped Cream,20,gram
+Mango Graham Frappe,Mango Puree,30,ml
+Mango Graham Frappe,Graham Crumbs,10,gram
+Java Chip Frappe,Cold Cup,1,pcs
+Java Chip Frappe,Cup Lid,1,pcs
+Java Chip Frappe,Straw,1,pcs
+Java Chip Frappe,Ice,180,gram
+Java Chip Frappe,Fresh Milk,120,ml
+Java Chip Frappe,Frappe Base Powder,25,gram
+Java Chip Frappe,Whipped Cream,20,gram
+Java Chip Frappe,Java Chip Powder,25,gram
+Java Chip Frappe,Chocolate Chips,10,gram
+Roasted Almond Latte,Cold Cup,1,pcs
+Roasted Almond Latte,Cup Lid,1,pcs
+Roasted Almond Latte,Straw,1,pcs
+Roasted Almond Latte,Espresso Blend Beans,18,gram
+Roasted Almond Latte,Fresh Milk,180,ml
+Roasted Almond Latte,Roasted Almond Syrup,20,ml
+Hazelnut Espresso Latte,Cold Cup,1,pcs
+Hazelnut Espresso Latte,Cup Lid,1,pcs
+Hazelnut Espresso Latte,Straw,1,pcs
+Hazelnut Espresso Latte,Espresso Blend Beans,18,gram
+Hazelnut Espresso Latte,Fresh Milk,180,ml
+Hazelnut Espresso Latte,Hazelnut Syrup,20,ml
+French Vanilla Espresso Latte,Cold Cup,1,pcs
+French Vanilla Espresso Latte,Cup Lid,1,pcs
+French Vanilla Espresso Latte,Straw,1,pcs
+French Vanilla Espresso Latte,Espresso Blend Beans,18,gram
+French Vanilla Espresso Latte,Fresh Milk,180,ml
+French Vanilla Espresso Latte,French Vanilla Syrup,20,ml
+Sea Salt Caramel Latte,Cold Cup,1,pcs
+Sea Salt Caramel Latte,Cup Lid,1,pcs
+Sea Salt Caramel Latte,Straw,1,pcs
+Sea Salt Caramel Latte,Espresso Blend Beans,18,gram
+Sea Salt Caramel Latte,Fresh Milk,180,ml
+Sea Salt Caramel Latte,Caramel Sauce,20,ml
+Sea Salt Caramel Latte,Sea Salt Cream,40,ml
+Ginger Ale,Cold Cup,1,pcs
+Ginger Ale,Cup Lid,1,pcs
+Ginger Ale,Straw,1,pcs
+Ginger Ale,Ginger,30,gram
+Ginger Ale,Honey,20,ml
+Ginger Ale,Lemon Juice,10,ml
+Ginger Ale,Sugar Syrup,15,ml
+Honey Lemon Cucumber,Cold Cup,1,pcs
+Honey Lemon Cucumber,Cup Lid,1,pcs
+Honey Lemon Cucumber,Straw,1,pcs
+Honey Lemon Cucumber,Cucumber,40,gram
+Honey Lemon Cucumber,Honey,20,ml
+Honey Lemon Cucumber,Lemon Juice,15,ml
+Honey Lemon Cucumber,Ice,120,gram
+Dalgona Coffee,Cold Cup,1,pcs
+Dalgona Coffee,Cup Lid,1,pcs
+Dalgona Coffee,Straw,1,pcs
+Dalgona Coffee,Espresso Blend Beans,18,gram
+Dalgona Coffee,Fresh Milk,180,ml
+Dalgona Coffee,Dalgona Coffee Powder,20,gram
+Caramel Macchiato,Cold Cup,1,pcs
+Caramel Macchiato,Cup Lid,1,pcs
+Caramel Macchiato,Straw,1,pcs
+Caramel Macchiato,Espresso Blend Beans,18,gram
+Caramel Macchiato,Fresh Milk,180,ml
+Caramel Macchiato,Caramel Sauce,20,ml
+Dark Chocolate Milktea,Cold Cup,1,pcs
+Dark Chocolate Milktea,Cup Lid,1,pcs
+Dark Chocolate Milktea,Straw,1,pcs
+Dark Chocolate Milktea,Black Tea Leaves,5,gram
+Dark Chocolate Milktea,Milk Tea Base Powder,25,gram
+Dark Chocolate Milktea,Fresh Milk,120,ml
+Dark Chocolate Milktea,Sugar Syrup,15,ml
+Dark Chocolate Milktea,Sealing Film,1,pcs
+Dark Chocolate Milktea,Dark Chocolate Powder,15,gram
+Black Forest Milktea,Cold Cup,1,pcs
+Black Forest Milktea,Cup Lid,1,pcs
+Black Forest Milktea,Straw,1,pcs
+Black Forest Milktea,Black Tea Leaves,5,gram
+Black Forest Milktea,Milk Tea Base Powder,25,gram
+Black Forest Milktea,Fresh Milk,120,ml
+Black Forest Milktea,Sugar Syrup,15,ml
+Black Forest Milktea,Sealing Film,1,pcs
+Black Forest Milktea,Black Forest Syrup,20,ml
+Wintermelon Milktea,Cold Cup,1,pcs
+Wintermelon Milktea,Cup Lid,1,pcs
+Wintermelon Milktea,Straw,1,pcs
+Wintermelon Milktea,Black Tea Leaves,5,gram
+Wintermelon Milktea,Milk Tea Base Powder,25,gram
+Wintermelon Milktea,Fresh Milk,120,ml
+Wintermelon Milktea,Sugar Syrup,15,ml
+Wintermelon Milktea,Sealing Film,1,pcs
+Wintermelon Milktea,Wintermelon Syrup,20,ml
+Taro Milktea,Cold Cup,1,pcs
+Taro Milktea,Cup Lid,1,pcs
+Taro Milktea,Straw,1,pcs
+Taro Milktea,Black Tea Leaves,5,gram
+Taro Milktea,Milk Tea Base Powder,25,gram
+Taro Milktea,Fresh Milk,120,ml
+Taro Milktea,Sugar Syrup,15,ml
+Taro Milktea,Sealing Film,1,pcs
+Taro Milktea,Taro Powder,20,gram
+Okinawa Milktea,Cold Cup,1,pcs
+Okinawa Milktea,Cup Lid,1,pcs
+Okinawa Milktea,Straw,1,pcs
+Okinawa Milktea,Black Tea Leaves,5,gram
+Okinawa Milktea,Milk Tea Base Powder,25,gram
+Okinawa Milktea,Fresh Milk,120,ml
+Okinawa Milktea,Sugar Syrup,15,ml
+Okinawa Milktea,Sealing Film,1,pcs
+Okinawa Milktea,Okinawa Syrup,20,ml
+Hot Caramel Macchiato,Hot Cup,1,pcs
+Hot Caramel Macchiato,Espresso Blend Beans,18,gram
+Hot Caramel Macchiato,Fresh Milk,180,ml
+Hot Caramel Macchiato,Caramel Sauce,20,ml
+Hot Spanish Latte,Hot Cup,1,pcs
+Hot Spanish Latte,Espresso Blend Beans,18,gram
+Hot Spanish Latte,Fresh Milk,180,ml
+Hot French Vanilla,Hot Cup,1,pcs
+Hot French Vanilla,Espresso Blend Beans,18,gram
+Hot French Vanilla,Fresh Milk,180,ml
+Hot French Vanilla,French Vanilla Syrup,20,ml
+Hot Chocolate,Hot Cup,1,pcs
+Hot Chocolate,Espresso Blend Beans,18,gram
+Hot Chocolate,Fresh Milk,180,ml
+Hot Chocolate,Dark Chocolate Powder,20,gram
+Hot Matcha,Hot Cup,1,pcs
+Hot Matcha,Matcha Powder,8,gram
+Hot Matcha,Fresh Milk,180,ml
+Hot Matcha,Sugar Syrup,15,ml
+Oat Milk Add-on,Oat Milk,120,ml
+Non Dairy Add-on,Non-Dairy Milk,120,ml
+Soy Milk Add-on,Soy Milk,120,ml
+Blueberry Soda,Cold Cup,1,pcs
+Blueberry Soda,Cup Lid,1,pcs
+Blueberry Soda,Straw,1,pcs
+Blueberry Soda,Soda Water,180,ml
+Blueberry Soda,Ice,120,gram
+Blueberry Soda,Blueberry Syrup,25,ml
+Green Apple Soda,Cold Cup,1,pcs
+Green Apple Soda,Cup Lid,1,pcs
+Green Apple Soda,Straw,1,pcs
+Green Apple Soda,Soda Water,180,ml
+Green Apple Soda,Ice,120,gram
+Green Apple Soda,Green Apple Syrup,25,ml
+Passion Fruit Soda,Cold Cup,1,pcs
+Passion Fruit Soda,Cup Lid,1,pcs
+Passion Fruit Soda,Straw,1,pcs
+Passion Fruit Soda,Soda Water,180,ml
+Passion Fruit Soda,Ice,120,gram
+Passion Fruit Soda,Passion Fruit Syrup,25,ml
+Lychee Soda,Cold Cup,1,pcs
+Lychee Soda,Cup Lid,1,pcs
+Lychee Soda,Straw,1,pcs
+Lychee Soda,Soda Water,180,ml
+Lychee Soda,Ice,120,gram
+Lychee Soda,Lychee Syrup,25,ml
+Lemon Soda,Cold Cup,1,pcs
+Lemon Soda,Cup Lid,1,pcs
+Lemon Soda,Straw,1,pcs
+Lemon Soda,Soda Water,180,ml
+Lemon Soda,Ice,120,gram
+Lemon Soda,Lemon Syrup,25,ml
+Dirty Matcha,Cold Cup,1,pcs
+Dirty Matcha,Cup Lid,1,pcs
+Dirty Matcha,Straw,1,pcs
+Dirty Matcha,Matcha Powder,8,gram
+Dirty Matcha,Fresh Milk,180,ml
+Dirty Matcha,Sugar Syrup,15,ml
+Dirty Matcha,Espresso Blend Beans,18,gram
+Strawberry Matcha Frappe,Cold Cup,1,pcs
+Strawberry Matcha Frappe,Cup Lid,1,pcs
+Strawberry Matcha Frappe,Straw,1,pcs
+Strawberry Matcha Frappe,Matcha Powder,8,gram
+Strawberry Matcha Frappe,Fresh Milk,180,ml
+Strawberry Matcha Frappe,Sugar Syrup,15,ml
+Strawberry Matcha Frappe,Strawberry Puree,25,ml
+Matcha Milktea,Cold Cup,1,pcs
+Matcha Milktea,Cup Lid,1,pcs
+Matcha Milktea,Straw,1,pcs
+Matcha Milktea,Matcha Powder,8,gram
+Matcha Milktea,Fresh Milk,180,ml
+Matcha Milktea,Sugar Syrup,15,ml
+Oreo Matcha Latte,Cold Cup,1,pcs
+Oreo Matcha Latte,Cup Lid,1,pcs
+Oreo Matcha Latte,Straw,1,pcs
+Oreo Matcha Latte,Matcha Powder,8,gram
+Oreo Matcha Latte,Fresh Milk,180,ml
+Oreo Matcha Latte,Sugar Syrup,15,ml
+Oreo Matcha Latte,Oreo Crumbs,15,gram
+Almuerzo Blend,Hot Cup,1,pcs
+Almuerzo Blend,Espresso Blend Beans,18,gram
+Barako Blend,Hot Cup,1,pcs
+Barako Blend,Barako Blend Beans,18,gram
+Arabica Blend,Hot Cup,1,pcs
+Arabica Blend,Arabica Blend Beans,18,gram
+Benguet Blend,Hot Cup,1,pcs
+Benguet Blend,Benguet Blend Beans,18,gram
+Kalinga Blend,Hot Cup,1,pcs
+Kalinga Blend,Kalinga Blend Beans,18,gram
+Espresso Blend,Hot Cup,1,pcs
+Espresso Blend,Espresso Blend Beans,18,gram
+Hazelnut Flavor Coffee,Hot Cup,1,pcs
+Hazelnut Flavor Coffee,Espresso Blend Beans,18,gram
+Hazelnut Flavor Coffee,Hazelnut Syrup,20,ml
+Turkish Cinnamon Coffee,Hot Cup,1,pcs
+Turkish Cinnamon Coffee,Espresso Blend Beans,18,gram
+Turkish Cinnamon Coffee,Cinnamon Powder,2,gram
+Robusta Quezon Prov,Hot Cup,1,pcs
+Robusta Quezon Prov,Robusta Quezon Beans,18,gram
+Liberica Indonesia,Hot Cup,1,pcs
+Liberica Indonesia,Liberica Indonesia Beans,18,gram
+Arabica Mt. Matutum,Hot Cup,1,pcs
+Arabica Mt. Matutum,Arabica Mt. Matutum Beans,18,gram
+Excelsa Amadeo,Hot Cup,1,pcs
+Excelsa Amadeo,Excelsa Amadeo Beans,18,gram
+Cajun Corn,Cooking Oil,20,ml
+Cajun Corn,Salt,3,gram
+Cajun Corn,Black Pepper,1,gram
+Cajun Corn,Corn Kernels,180,gram
+Cajun Corn,Butter,20,gram
+Sizzling Sisig,Cooking Oil,20,ml
+Sizzling Sisig,Salt,3,gram
+Sizzling Sisig,Black Pepper,1,gram
+Sizzling Sisig,Pork Sisig Meat,180,gram
+Sizzling Sisig,Onion,30,gram
+Sizzling Sisig,Mayonnaise,20,gram
+Kilawin na Liempo,Cooking Oil,20,ml
+Kilawin na Liempo,Salt,3,gram
+Kilawin na Liempo,Black Pepper,1,gram
+Kilawin na Liempo,Pork Belly,180,gram
+Kilawin na Liempo,Vinegar,40,ml
+Kilawin na Liempo,Onion,30,gram
+Lumpiang Shanghai,Cooking Oil,20,ml
+Lumpiang Shanghai,Salt,3,gram
+Lumpiang Shanghai,Black Pepper,1,gram
+Beef Loaded Nachos,Cooking Oil,20,ml
+Beef Loaded Nachos,Salt,3,gram
+Beef Loaded Nachos,Black Pepper,1,gram
+Beef Loaded Nachos,Nacho Chips,80,gram
+Beef Loaded Nachos,Beef Tapa,100,gram
+Beef Loaded Nachos,Cheese Sauce,40,gram
+Beef Loaded Nachos,Sour Cream,20,gram
+Ensaladang Mangga,Cooking Oil,20,ml
+Ensaladang Mangga,Salt,3,gram
+Ensaladang Mangga,Black Pepper,1,gram
+Ensaladang Mangga,Mango,180,gram
+Ensaladang Mangga,Tomato,40,gram
+Ensaladang Mangga,Onion,30,gram
+Ensaladang Mangga,Fish Sauce,15,ml
+Fried Calamari,Cooking Oil,20,ml
+Fried Calamari,Salt,3,gram
+Fried Calamari,Black Pepper,1,gram
+Fried Calamari,Calamari Rings,180,gram
+Fried Calamari,Flour,40,gram
+Cheesy Bacon Fries,Cooking Oil,20,ml
+Cheesy Bacon Fries,Salt,3,gram
+Cheesy Bacon Fries,Black Pepper,1,gram
+Cheesy Bacon Fries,French Fries,180,gram
+Cheesy Bacon Fries,Bacon,30,gram
+Cheesy Bacon Fries,Cheese Sauce,40,gram
+Dynamite,Cooking Oil,20,ml
+Dynamite,Salt,3,gram
+Dynamite,Black Pepper,1,gram
+Dynamite,Green Chili,5,pcs
+Dynamite,Cheddar Cheese,50,gram
+Dynamite,Lumpia Wrapper,5,pcs
+Boneless Chicksilog,Cooking Oil,20,ml
+Boneless Chicksilog,Salt,3,gram
+Boneless Chicksilog,Black Pepper,1,gram
+Boneless Chicksilog,Rice,180,gram
+Boneless Chicksilog,Egg,1,pcs
+Boneless Chicksilog,Garlic,10,gram
+Boneless Chicksilog,Chicken Fillet,150,gram
+Tapsilog,Cooking Oil,20,ml
+Tapsilog,Salt,3,gram
+Tapsilog,Black Pepper,1,gram
+Tapsilog,Rice,180,gram
+Tapsilog,Egg,1,pcs
+Tapsilog,Garlic,10,gram
+Tapsilog,Beef Tapa,150,gram
+Lechon Silog,Cooking Oil,20,ml
+Lechon Silog,Salt,3,gram
+Lechon Silog,Black Pepper,1,gram
+Lechon Silog,Rice,180,gram
+Lechon Silog,Egg,1,pcs
+Lechon Silog,Garlic,10,gram
+Lechon Silog,Pork Belly,150,gram
+Bangsilog,Cooking Oil,20,ml
+Bangsilog,Salt,3,gram
+Bangsilog,Black Pepper,1,gram
+Bangsilog,Rice,180,gram
+Bangsilog,Egg,1,pcs
+Bangsilog,Garlic,10,gram
+Bangsilog,Bangus,150,gram
+Hungarian Silog,Cooking Oil,20,ml
+Hungarian Silog,Salt,3,gram
+Hungarian Silog,Black Pepper,1,gram
+Hungarian Silog,Rice,180,gram
+Hungarian Silog,Egg,1,pcs
+Hungarian Silog,Garlic,10,gram
+Hungarian Silog,Hungarian Sausage,150,gram
+Pinyadobo,Cooking Oil,20,ml
+Pinyadobo,Salt,3,gram
+Pinyadobo,Black Pepper,1,gram
+Pinyadobo,Pork Belly,250,gram
+Pinyadobo,Soy Sauce,30,ml
+Pinyadobo,Vinegar,30,ml
+Pinyadobo,Pineapple Tidbits,80,gram
+Crispy Pork Binagoongan,Cooking Oil,20,ml
+Crispy Pork Binagoongan,Salt,3,gram
+Crispy Pork Binagoongan,Black Pepper,1,gram
+Crispy Pork Binagoongan,Pork Belly,250,gram
+Crispy Pork Binagoongan,Bagoong,50,gram
+Gising Gising,Cooking Oil,20,ml
+Gising Gising,Salt,3,gram
+Gising Gising,Black Pepper,1,gram
+Gising Gising,String Beans,180,gram
+Gising Gising,Coconut Milk,120,ml
+Gising Gising,Pork Belly,80,gram
+Beef Caldereta,Cooking Oil,20,ml
+Beef Caldereta,Salt,3,gram
+Beef Caldereta,Black Pepper,1,gram
+Beef Caldereta,Beef Caldereta Cut,250,gram
+Beef Caldereta,Caldereta Sauce,120,gram
+Beef Caldereta,Potato,80,gram
+Beef Caldereta,Carrot,60,gram
+Crispy Kare Kare,Cooking Oil,20,ml
+Crispy Kare Kare,Salt,3,gram
+Crispy Kare Kare,Black Pepper,1,gram
+Crispy Kare Kare,Pork Belly,250,gram
+Crispy Kare Kare,Peanut Sauce,100,gram
+Crispy Kare Kare,Bagoong,20,gram
+Crispy Kare Kare,Eggplant,60,gram
+Crispy Kare Kare,String Beans,60,gram
+Bangus Ala Pobre,Cooking Oil,20,ml
+Bangus Ala Pobre,Salt,3,gram
+Bangus Ala Pobre,Black Pepper,1,gram
+Bangus Ala Pobre,Bangus,250,gram
+Bangus Ala Pobre,Garlic,25,gram
+Bangus Ala Pobre,Soy Sauce,30,ml
+Crispy Pata,Cooking Oil,20,ml
+Crispy Pata,Salt,3,gram
+Crispy Pata,Black Pepper,1,gram
+Crispy Pata,Pork Leg,500,gram
+Crispy Pata,Soy Sauce,40,ml
+Pancit Canton,Cooking Oil,20,ml
+Pancit Canton,Salt,3,gram
+Pancit Canton,Black Pepper,1,gram
+Pancit Canton,Pancit Canton Noodles,200,gram
+Pancit Canton,Carrot,40,gram
+Pancit Canton,Cabbage,60,gram
+Pancit Canton,Chicken Stock,120,ml
+Pancit Bihon,Cooking Oil,20,ml
+Pancit Bihon,Salt,3,gram
+Pancit Bihon,Black Pepper,1,gram
+Pancit Bihon,Pancit Bihon Noodles,200,gram
+Pancit Bihon,Carrot,40,gram
+Pancit Bihon,Cabbage,60,gram
+Pancit Bihon,Chicken Stock,120,ml
+Mixed Pancit,Cooking Oil,20,ml
+Mixed Pancit,Salt,3,gram
+Mixed Pancit,Black Pepper,1,gram
+Mixed Pancit,Pancit Canton Noodles,120,gram
+Mixed Pancit,Pancit Bihon Noodles,120,gram
+Mixed Pancit,Carrot,40,gram
+Mixed Pancit,Cabbage,60,gram
+Margherita Pizza,Cooking Oil,20,ml
+Margherita Pizza,Salt,3,gram
+Margherita Pizza,Black Pepper,1,gram
+Margherita Pizza,Pizza Dough,1,pcs
+Margherita Pizza,Pizza Sauce,80,gram
+Margherita Pizza,Mozzarella Cheese,120,gram
+Pizza Supreme,Cooking Oil,20,ml
+Pizza Supreme,Salt,3,gram
+Pizza Supreme,Black Pepper,1,gram
+Pizza Supreme,Pizza Dough,1,pcs
+Pizza Supreme,Pizza Sauce,80,gram
+Pizza Supreme,Mozzarella Cheese,120,gram
+Pizza Supreme,Pepperoni,40,gram
+Pizza Supreme,Ham,40,gram
+Pizza Supreme,Onion,30,gram
+Quattro Formaggi Pizza,Cooking Oil,20,ml
+Quattro Formaggi Pizza,Salt,3,gram
+Quattro Formaggi Pizza,Black Pepper,1,gram
+Quattro Formaggi Pizza,Pizza Dough,1,pcs
+Quattro Formaggi Pizza,Pizza Sauce,80,gram
+Quattro Formaggi Pizza,Mozzarella Cheese,120,gram
+Quattro Formaggi Pizza,Cheddar Cheese,40,gram
+Quattro Formaggi Pizza,Parmesan Cheese,30,gram
+Quattro Formaggi Pizza,Blue Cheese,30,gram
+Pepperoni Pizza,Cooking Oil,20,ml
+Pepperoni Pizza,Salt,3,gram
+Pepperoni Pizza,Black Pepper,1,gram
+Pepperoni Pizza,Pizza Dough,1,pcs
+Pepperoni Pizza,Pizza Sauce,80,gram
+Pepperoni Pizza,Mozzarella Cheese,120,gram
+Pepperoni Pizza,Pepperoni,60,gram
+Hawaiian Pizza,Cooking Oil,20,ml
+Hawaiian Pizza,Salt,3,gram
+Hawaiian Pizza,Black Pepper,1,gram
+Hawaiian Pizza,Pizza Dough,1,pcs
+Hawaiian Pizza,Pizza Sauce,80,gram
+Hawaiian Pizza,Mozzarella Cheese,120,gram
+Hawaiian Pizza,Ham,60,gram
+Hawaiian Pizza,Pineapple Tidbits,60,gram
+Pork Barbecue,Cooking Oil,20,ml
+Pork Barbecue,Salt,3,gram
+Pork Barbecue,Black Pepper,1,gram
+Pork Barbecue,Pork BBQ Cut,180,gram
+Pork Barbecue,Soy Sauce,30,ml
+Pork Barbecue,Sugar Syrup,20,ml
+Honey Salmon Steak,Cooking Oil,20,ml
+Honey Salmon Steak,Salt,3,gram
+Honey Salmon Steak,Black Pepper,1,gram
+Honey Salmon Steak,Salmon Steak,180,gram
+Honey Salmon Steak,Honey,25,ml
+Grilled Squid,Cooking Oil,20,ml
+Grilled Squid,Salt,3,gram
+Grilled Squid,Black Pepper,1,gram
+Grilled Squid,Squid,220,gram
+Grilled Squid,Soy Sauce,20,ml
+Mashed Potatoes,Cooking Oil,20,ml
+Mashed Potatoes,Salt,3,gram
+Mashed Potatoes,Black Pepper,1,gram
+Mashed Potatoes,Mashed Potato Mix,160,gram
+Mashed Potatoes,Butter,20,gram
+Mashed Potatoes,Truffle Oil,5,ml
+Prime Beef Ribs,Cooking Oil,20,ml
+Prime Beef Ribs,Salt,3,gram
+Prime Beef Ribs,Black Pepper,1,gram
+Prime Beef Ribs,Beef Ribs,300,gram
+Prime Beef Ribs,Soy Sauce,30,ml
+Chicken Barbecue,Cooking Oil,20,ml
+Chicken Barbecue,Salt,3,gram
+Chicken Barbecue,Black Pepper,1,gram
+Chicken Barbecue,Chicken BBQ Cut,180,gram
+Chicken Barbecue,Soy Sauce,30,ml
+Chicken Barbecue,Sugar Syrup,20,ml
+Sinigang na Baboy,Cooking Oil,20,ml
+Sinigang na Baboy,Salt,3,gram
+Sinigang na Baboy,Black Pepper,1,gram
+Sinigang na Baboy,Pork Belly,220,gram
+Sinigang na Baboy,Tamarind Mix,20,gram
+Sinigang na Baboy,Pechay,60,gram
+Sinigang na Baboy,Eggplant,60,gram
+Beef Bulalo,Cooking Oil,20,ml
+Beef Bulalo,Salt,3,gram
+Beef Bulalo,Black Pepper,1,gram
+Beef Bulalo,Beef Shank,300,gram
+Beef Bulalo,Beef Stock,200,ml
+Beef Bulalo,Cabbage,80,gram
+Chicken Binakol,Cooking Oil,20,ml
+Chicken Binakol,Salt,3,gram
+Chicken Binakol,Black Pepper,1,gram
+Chicken Binakol,Chicken Fillet,220,gram
+Chicken Binakol,Coconut Water,250,ml
+Chicken Binakol,Ginger,20,gram

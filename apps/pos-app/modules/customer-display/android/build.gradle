@@ -1,0 +1,22 @@
+plugins {
+  id 'com.android.library'
+  id 'expo-module-gradle-plugin'
+}
+
+group = 'com.findxny426.customerdisplay'
+version = '0.0.1'
+
+android {
+  namespace 'com.findxny426.customerdisplay'
+  defaultConfig {
+    versionCode 1
+    versionName '0.0.1'
+  }
+}
+
+dependencies {
+  // React Native Android classes (ReactApplication, ReactHost, ReactSurface).
+  // Version is resolved by the React Native Gradle plugin's dependency
+  // substitution — mirror how expo-modules-core declares it.
+  implementation 'com.facebook.react:react-android'
+}

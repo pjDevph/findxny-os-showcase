@@ -1,0 +1,460 @@
+{
+  "info": {
+    "name": "All-in-One POS — Edge Functions",
+    "_postman_id": "9c1f3a4b-2222-4f7e-9999-aiopostman2",
+    "description": "Pre-wired against the deployed Supabase project. Run the **0. Setup** folder once (Sign In → Create Workspace → Seed Catalog) and IDs flow through collection variables. After that any endpoint works in any order.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "baseUrl",     "value": "https://your-project-ref.supabase.co" },
+    { "key": "anonKey",     "value": "sb_publishable_EhzatddPI7z716MWpaKwAw_8BfxjKTZ" },
+    { "key": "serviceRole", "value": "sb_secret_hIAvbm56rb-mplFY_HsF2A_isMjVjzd" },
+    { "key": "email",       "value": "" },
+    { "key": "password",    "value": "TestPass123!" },
+    { "key": "accessToken", "value": "" },
+    { "key": "workspaceId", "value": "" },
+    { "key": "branchId",    "value": "" },
+    { "key": "productId",   "value": "" },
+    { "key": "resourceId",  "value": "" },
+    { "key": "inventoryItemId", "value": "" },
+    { "key": "orderId",     "value": "" },
+    { "key": "ticketId",    "value": "" },
+    { "key": "bookingId",   "value": "" },
+    { "key": "paymentId",   "value": "" },
+    { "key": "transactionId", "value": "" }
+  ],
+  "item": [
+    {
+      "name": "0. Setup",
+      "item": [
+        {
+          "name": "1. Admin Create Test User",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": { "exec": [
+                "if (!pm.collectionVariables.get('email')) {",
+                "  pm.collectionVariables.set('email', 'pm-test+' + Date.now() + '@example.test');",
+                "}"
+              ], "type": "text/javascript" }
+            },
+            {
+              "listen": "test",
+              "script": { "exec": [
+                "pm.test('user created or exists', () => pm.expect([200,201,422]).to.include(pm.response.code));"
+              ], "type": "text/javascript" }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "apikey",        "value": "{{serviceRole}}" },
+              { "key": "Authorization", "value": "Bearer {{serviceRole}}" },
+              { "key": "content-type",  "value": "application/json" }
+            ],
+            "url": "{{baseUrl}}/auth/v1/admin/users",
+            "body": { "mode": "raw", "raw": "{\n  \"email\": \"{{email}}\",\n  \"password\": \"{{password}}\",\n  \"email_confirm\": true,\n  \"user_metadata\": { \"full_name\": \"Postman Test\" }\n}" }
+          }
+        },
+        {
+          "name": "2. Sign In (capture accessToken)",
+          "event": [
+            {
+              "listen": "test",
+              "script": { "exec": [
+                "const j = pm.response.json();",
+                "pm.test('got access_token', () => pm.expect(j.access_token).to.be.a('string'));",
+                "pm.collectionVariables.set('accessToken', j.access_token);"
+              ], "type": "text/javascript" }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "apikey",       "value": "{{anonKey}}" },
+              { "key": "content-type", "value": "application/json" }
+            ],
+            "url": "{{baseUrl}}/auth/v1/token?grant_type=password",
+            "body": { "mode": "raw", "raw": "{\n  \"email\": \"{{email}}\",\n  \"password\": \"{{password}}\"\n}" }
+          }
+        },
+        {
+          "name": "3. Create Workspace (capture workspaceId, branchId)",
+          "event": [
+            {
+              "listen": "test",
+              "script": { "exec": [
+                "const j = pm.response.json();",
+                "pm.test('201 created', () => pm.expect(pm.response.code).to.eql(201));",
+                "pm.collectionVariables.set('workspaceId', j.workspace.id);",
+                "pm.collectionVariables.set('branchId', j.branch.id);"
+              ], "type": "text/javascript" }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "apikey",        "value": "{{anonKey}}" },
+              { "key": "Authorization", "value": "Bearer {{accessToken}}" },
+              { "key": "content-type",  "value": "application/json" }
+            ],
+            "url": "{{baseUrl}}/functions/v1/auth-create-workspace",
+            "body": { "mode": "raw", "raw": "{\n  \"workspace\": { \"name\": \"Postman Cafe\", \"slug\": \"pm-{{$timestamp}}\", \"currency\": \"USD\" },\n  \"branch\":    { \"name\": \"Main\", \"address\": \"123 Postman St\" }\n}" }
+          }
+        },
+        {
+          "name": "4. Seed Product (capture productId)",
+          "event": [
+            {
+              "listen": "test",
+              "script": { "exec": [
+                "const j = pm.response.json();",
+                "const row = Array.isArray(j) ? j[0] : j;",
+                "pm.test('product created', () => pm.expect(row && row.id).to.be.a('string'));",
+                "pm.collectionVariables.set('productId', row.id);"
+              ], "type": "text/javascript" }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "apikey",        "value": "{{serviceRole}}" },
+              { "key": "Authorization", "value": "Bearer {{serviceRole}}" },
+              { "key": "content-type",  "value": "application/json" },
+              { "key": "Prefer",        "value": "return=representation" }
+            ],
+            "url": "{{baseUrl}}/rest/v1/products",
+            "body": { "mode": "raw", "raw": "{\n  \"workspace_id\": \"{{workspaceId}}\",\n  \"name\": \"Postman Burger\",\n  \"sku\": \"PM-{{$timestamp}}\",\n  \"price\": 9.99,\n  \"kitchen_required\": true\n}" }
+          }
+        },
+        {
+          "name": "5. Seed Bookable Resource (capture resourceId)",
+          "event": [
+            {
+              "listen": "test",
+              "script": { "exec": [
+                "const j = pm.response.json();",
+                "const row = Array.isArray(j) ? j[0] : j;",
+                "pm.collectionVariables.set('resourceId', row.id);"
+              ], "type": "text/javascript" }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "apikey",        "value": "{{serviceRole}}" },
+              { "key": "Authorization", "value": "Bearer {{serviceRole}}" },
+              { "key": "content-type",  "value": "application/json" },
+              { "key": "Prefer",        "value": "return=representation" }
+            ],
+            "url": "{{baseUrl}}/rest/v1/bookable_resources",
+            "body": { "mode": "raw", "raw": "{\n  \"workspace_id\": \"{{workspaceId}}\",\n  \"branch_id\": \"{{branchId}}\",\n  \"type\": \"room\",\n  \"name\": \"Postman Room\",\n  \"capacity\": 4,\n  \"hourly_rate\": 20\n}" }
+          }
+        },
+        {
+          "name": "6. Seed Inventory Item (capture inventoryItemId)",
+          "event": [
+            {
+              "listen": "test",
+              "script": { "exec": [
+                "const j = pm.response.json();",
+                "const row = Array.isArray(j) ? j[0] : j;",
+                "pm.collectionVariables.set('inventoryItemId', row.id);"
+              ], "type": "text/javascript" }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "apikey",        "value": "{{serviceRole}}" },
+              { "key": "Authorization", "value": "Bearer {{serviceRole}}" },
+              { "key": "content-type",  "value": "application/json" },
+              { "key": "Prefer",        "value": "return=representation" }
+            ],
+            "url": "{{baseUrl}}/rest/v1/inventory_items",
+            "body": { "mode": "raw", "raw": "{\n  \"workspace_id\": \"{{workspaceId}}\",\n  \"branch_id\": \"{{branchId}}\",\n  \"product_id\": \"{{productId}}\",\n  \"quantity\": 25,\n  \"unit\": \"pcs\"\n}" }
+          }
+        }
+      ]
+    },
+
+    {
+      "name": "1. Orders",
+      "item": [
+        {
+          "name": "Create Order (capture orderId)",
+          "event": [{ "listen": "test", "script": { "exec": [
+            "const j = pm.response.json();",
+            "if (j.order && j.order.id) pm.collectionVariables.set('orderId', j.order.id);",
+            "pm.test('201', () => pm.expect(pm.response.code).to.eql(201));"
+          ], "type": "text/javascript" } }],
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "apikey",        "value": "{{anonKey}}" },
+              { "key": "Authorization", "value": "Bearer {{accessToken}}" },
+              { "key": "content-type",  "value": "application/json" }
+            ],
+            "url": "{{baseUrl}}/functions/v1/orders-create",
+            "body": { "mode": "raw", "raw": "{\n  \"workspace_id\": \"{{workspaceId}}\",\n  \"branch_id\": \"{{branchId}}\",\n  \"type\": \"dine_in\",\n  \"table_no\": \"5\",\n  \"tax_rate\": 0.10,\n  \"items\": [\n    { \"product_id\": \"{{productId}}\", \"quantity\": 2 }\n  ]\n}" }
+          }
+        },
+        {
+          "name": "Cancel Order",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "apikey",        "value": "{{anonKey}}" },
+              { "key": "Authorization", "value": "Bearer {{accessToken}}" },
+              { "key": "content-type",  "value": "application/json" }
+            ],
+            "url": "{{baseUrl}}/functions/v1/orders-cancel",
+            "body": { "mode": "raw", "raw": "{\n  \"workspace_id\": \"{{workspaceId}}\",\n  \"order_id\": \"{{orderId}}\",\n  \"reason\": \"Customer changed mind\"\n}" }
+          }
+        }
+      ]
+    },
+
+    {
+      "name": "2. Kitchen",
+      "item": [
+        {
+          "name": "Lookup Ticket for Order (capture ticketId)",
+          "event": [{ "listen": "test", "script": { "exec": [
+            "const arr = pm.response.json();",
+            "pm.test('found ticket', () => pm.expect(arr).to.be.an('array').that.is.not.empty);",
+            "pm.collectionVariables.set('ticketId', arr[0].id);"
+          ], "type": "text/javascript" } }],
+          "request": {
+            "method": "GET",
+            "header": [
+              { "key": "apikey",        "value": "{{serviceRole}}" },
+              { "key": "Authorization", "value": "Bearer {{serviceRole}}" }
+            ],
+            "url": "{{baseUrl}}/rest/v1/kitchen_tickets?order_id=eq.{{orderId}}&select=id"
+          }
+        },
+        {
+          "name": "Update Status — preparing",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "apikey",        "value": "{{anonKey}}" },
+              { "key": "Authorization", "value": "Bearer {{accessToken}}" },
+              { "key": "content-type",  "value": "application/json" }
+            ],
+            "url": "{{baseUrl}}/functions/v1/kitchen-update-status",
+            "body": { "mode": "raw", "raw": "{\n  \"workspace_id\": \"{{workspaceId}}\",\n  \"ticket_id\": \"{{ticketId}}\",\n  \"status\": \"preparing\"\n}" }
+          }
+        },
+        {
+          "name": "Update Status — ready",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "apikey",        "value": "{{anonKey}}" },
+              { "key": "Authorization", "value": "Bearer {{accessToken}}" },
+              { "key": "content-type",  "value": "application/json" }
+            ],
+            "url": "{{baseUrl}}/functions/v1/kitchen-update-status",
+            "body": { "mode": "raw", "raw": "{\n  \"workspace_id\": \"{{workspaceId}}\",\n  \"ticket_id\": \"{{ticketId}}\",\n  \"status\": \"ready\"\n}" }
+          }
+        },
+        {
+          "name": "Update Status — completed",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "apikey",        "value": "{{anonKey}}" },
+              { "key": "Authorization", "value": "Bearer {{accessToken}}" },
+              { "key": "content-type",  "value": "application/json" }
+            ],
+            "url": "{{baseUrl}}/functions/v1/kitchen-update-status",
+            "body": { "mode": "raw", "raw": "{\n  \"workspace_id\": \"{{workspaceId}}\",\n  \"ticket_id\": \"{{ticketId}}\",\n  \"status\": \"completed\"\n}" }
+          }
+        }
+      ]
+    },
+
+    {
+      "name": "3. Bookings",
+      "item": [
+        {
+          "name": "Hold (capture bookingId)",
+          "event": [{ "listen": "prerequest", "script": { "exec": [
+            "const start = new Date(Date.now() + 60*60*1000).toISOString();",
+            "const end   = new Date(Date.now() + 2*60*60*1000).toISOString();",
+            "pm.collectionVariables.set('start_time', start);",
+            "pm.collectionVariables.set('end_time', end);"
+          ], "type": "text/javascript" } },
+          { "listen": "test", "script": { "exec": [
+            "const j = pm.response.json();",
+            "if (j.booking && j.booking.id) pm.collectionVariables.set('bookingId', j.booking.id);"
+          ], "type": "text/javascript" } }],
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "apikey",        "value": "{{anonKey}}" },
+              { "key": "Authorization", "value": "Bearer {{accessToken}}" },
+              { "key": "content-type",  "value": "application/json" }
+            ],
+            "url": "{{baseUrl}}/functions/v1/bookings-hold",
+            "body": { "mode": "raw", "raw": "{\n  \"workspace_id\": \"{{workspaceId}}\",\n  \"branch_id\": \"{{branchId}}\",\n  \"resource_id\": \"{{resourceId}}\",\n  \"start_time\": \"{{start_time}}\",\n  \"end_time\": \"{{end_time}}\"\n}" }
+          }
+        },
+        {
+          "name": "Confirm",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "apikey",        "value": "{{anonKey}}" },
+              { "key": "Authorization", "value": "Bearer {{accessToken}}" },
+              { "key": "content-type",  "value": "application/json" }
+            ],
+            "url": "{{baseUrl}}/functions/v1/bookings-confirm",
+            "body": { "mode": "raw", "raw": "{\n  \"workspace_id\": \"{{workspaceId}}\",\n  \"booking_id\": \"{{bookingId}}\"\n}" }
+          }
+        },
+        {
+          "name": "Cancel",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "apikey",        "value": "{{anonKey}}" },
+              { "key": "Authorization", "value": "Bearer {{accessToken}}" },
+              { "key": "content-type",  "value": "application/json" }
+            ],
+            "url": "{{baseUrl}}/functions/v1/bookings-cancel",
+            "body": { "mode": "raw", "raw": "{\n  \"workspace_id\": \"{{workspaceId}}\",\n  \"booking_id\": \"{{bookingId}}\",\n  \"reason\": \"Resource unavailable\"\n}" }
+          }
+        }
+      ]
+    },
+
+    {
+      "name": "4. Payments",
+      "item": [
+        {
+          "name": "Create Intent (Stripe mock)",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "apikey",        "value": "{{anonKey}}" },
+              { "key": "Authorization", "value": "Bearer {{accessToken}}" },
+              { "key": "content-type",  "value": "application/json" }
+            ],
+            "url": "{{baseUrl}}/functions/v1/payments-create-intent",
+            "body": { "mode": "raw", "raw": "{\n  \"workspace_id\": \"{{workspaceId}}\",\n  \"order_id\": \"{{orderId}}\"\n}" }
+          }
+        },
+        {
+          "name": "Cash Confirm (capture paymentId, transactionId)",
+          "event": [{ "listen": "test", "script": { "exec": [
+            "const j = pm.response.json();",
+            "if (j.payment) pm.collectionVariables.set('paymentId', j.payment.id);",
+            "if (j.transaction) pm.collectionVariables.set('transactionId', j.transaction.id);"
+          ], "type": "text/javascript" } }],
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "apikey",        "value": "{{anonKey}}" },
+              { "key": "Authorization", "value": "Bearer {{accessToken}}" },
+              { "key": "content-type",  "value": "application/json" }
+            ],
+            "url": "{{baseUrl}}/functions/v1/payments-cash-confirm",
+            "body": { "mode": "raw", "raw": "{\n  \"workspace_id\": \"{{workspaceId}}\",\n  \"branch_id\": \"{{branchId}}\",\n  \"order_id\": \"{{orderId}}\",\n  \"cash_received\": 50.00\n}" }
+          }
+        },
+        {
+          "name": "Webhook (Stripe mock)",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "stripe-signature", "value": "postman-mock" },
+              { "key": "content-type",     "value": "application/json" }
+            ],
+            "url": "{{baseUrl}}/functions/v1/payments-webhook",
+            "body": { "mode": "raw", "raw": "{\n  \"type\": \"payment_intent.succeeded\",\n  \"data\": { \"object\": { \"id\": \"pi_mock_xxx\", \"status\": \"succeeded\" } }\n}" }
+          }
+        }
+      ]
+    },
+
+    {
+      "name": "5. Refunds & Voids",
+      "item": [
+        {
+          "name": "Create Refund (partial)",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "apikey",        "value": "{{anonKey}}" },
+              { "key": "Authorization", "value": "Bearer {{accessToken}}" },
+              { "key": "content-type",  "value": "application/json" }
+            ],
+            "url": "{{baseUrl}}/functions/v1/refunds-create",
+            "body": { "mode": "raw", "raw": "{\n  \"workspace_id\": \"{{workspaceId}}\",\n  \"branch_id\": \"{{branchId}}\",\n  \"payment_id\": \"{{paymentId}}\",\n  \"amount\": 1.00,\n  \"reason\": \"Customer complaint\"\n}" }
+          }
+        },
+        {
+          "name": "Void Transaction",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "apikey",        "value": "{{anonKey}}" },
+              { "key": "Authorization", "value": "Bearer {{accessToken}}" },
+              { "key": "content-type",  "value": "application/json" }
+            ],
+            "url": "{{baseUrl}}/functions/v1/transactions-void",
+            "body": { "mode": "raw", "raw": "{\n  \"workspace_id\": \"{{workspaceId}}\",\n  \"transaction_id\": \"{{transactionId}}\",\n  \"reason\": \"Wrong item charged\"\n}" }
+          }
+        }
+      ]
+    },
+
+    {
+      "name": "6. Inventory",
+      "item": [
+        {
+          "name": "Adjust — Stock In",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "apikey",        "value": "{{anonKey}}" },
+              { "key": "Authorization", "value": "Bearer {{accessToken}}" },
+              { "key": "content-type",  "value": "application/json" }
+            ],
+            "url": "{{baseUrl}}/functions/v1/inventory-adjust",
+            "body": { "mode": "raw", "raw": "{\n  \"workspace_id\": \"{{workspaceId}}\",\n  \"branch_id\": \"{{branchId}}\",\n  \"inventory_item_id\": \"{{inventoryItemId}}\",\n  \"type\": \"in\",\n  \"quantity\": 25,\n  \"reason\": \"Restock delivery\"\n}" }
+          }
+        },
+        {
+          "name": "Adjust — Stock Out",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "apikey",        "value": "{{anonKey}}" },
+              { "key": "Authorization", "value": "Bearer {{accessToken}}" },
+              { "key": "content-type",  "value": "application/json" }
+            ],
+            "url": "{{baseUrl}}/functions/v1/inventory-adjust",
+            "body": { "mode": "raw", "raw": "{\n  \"workspace_id\": \"{{workspaceId}}\",\n  \"branch_id\": \"{{branchId}}\",\n  \"inventory_item_id\": \"{{inventoryItemId}}\",\n  \"type\": \"out\",\n  \"quantity\": 3,\n  \"reason\": \"Sale\"\n}" }
+          }
+        },
+        {
+          "name": "Adjust — Set Absolute",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "apikey",        "value": "{{anonKey}}" },
+              { "key": "Authorization", "value": "Bearer {{accessToken}}" },
+              { "key": "content-type",  "value": "application/json" }
+            ],
+            "url": "{{baseUrl}}/functions/v1/inventory-adjust",
+            "body": { "mode": "raw", "raw": "{\n  \"workspace_id\": \"{{workspaceId}}\",\n  \"branch_id\": \"{{branchId}}\",\n  \"inventory_item_id\": \"{{inventoryItemId}}\",\n  \"type\": \"adjustment\",\n  \"quantity\": 100,\n  \"reason\": \"Stocktake correction\"\n}" }
+          }
+        }
+      ]
+    }
+  ]
+}

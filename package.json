@@ -1,0 +1,44 @@
+{
+  "name": "all-in-one-pos",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*",
+    "tooling/*"
+  ],
+  "dependencies": {
+    "expo-router": "~55.0.13",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "expo": "~55.0.19",
+    "react-native": "0.83.6"
+  },
+  "devDependencies": {
+    "husky": "^9.1.7",
+    "lint-staged": "^15.2.10"
+  },
+  "scripts": {
+    "prepare": "husky",
+    "dev:web": "npm --workspace @aio/web run dev",
+    "dev:pos": "npm --workspace @aio/pos-app run start",
+    "dev:be": "supabase functions serve --env-file ./supabase/.env --no-verify-jwt",
+    "be:deploy": "powershell -File tooling/scripts/deploy-functions.ps1",
+    "be:migrate": "node tooling/scripts/apply-migrations.mjs",
+    "be:seed": "node tooling/scripts/apply-seed.mjs",
+    "be:reset": "node tooling/scripts/wipe-and-reseed.mjs",
+    "smoke": "node tooling/scripts/smoke-test.mjs",
+    "test:e2e": "npm --workspace @aio/web run test:e2e",
+    "sonar": "node tooling/scripts/sonar-scan.mjs",
+    "lint": "npm run lint --workspace @aio/web",
+    "typecheck": "npm run typecheck --workspace @aio/web",
+    "typecheck:pos-app": "npm run typecheck --workspace @aio/pos-app",
+    "test": "npm run test --workspace @aio/web",
+    "verify": "npm run lint && npm run typecheck && npm run test"
+  },
+  "lint-staged": {
+    "apps/web/**/*.{ts,tsx}": [
+      "eslint --fix"
+    ]
+  },
+  "version": "1.0.0"
+}

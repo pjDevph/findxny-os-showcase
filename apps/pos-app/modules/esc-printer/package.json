@@ -1,0 +1,7 @@
+{
+  "name": "esc-printer",
+  "version": "0.0.1",
+  "description": "ESC/POS and TSPL thermal printer + cash drawer native module",
+  "main": "index.ts",
+  "private": true
+}

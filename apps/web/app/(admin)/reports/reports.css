@@ -1,0 +1,158 @@
+/* ════════════════════════════════════════════════
+   Reports — layout helpers only.
+   Base component styles come from admin.css.
+   All colors use the project's CSS variables.
+   ════════════════════════════════════════════════ */
+
+/* Date range bar */
+.rep-date-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 32px;
+  border-bottom: 1px solid var(--line);
+  background: var(--bg-1);
+  flex-wrap: wrap;
+}
+.rep-date-label {
+  font-family: var(--f-mono);
+  font-size: 10px; color: var(--text-3);
+  letter-spacing: 0.12em; text-transform: uppercase;
+}
+.rep-date-input {
+  border: 1px solid var(--line-strong);
+  border-radius: var(--r-sm);
+  padding: 5px 10px;
+  font-family: var(--f-mono); font-size: 11px;
+  color: var(--text-1); background: var(--bg-3);
+  cursor: pointer; outline: none;
+  transition: border-color 0.15s;
+}
+.rep-date-input:focus { border-color: rgba(var(--tint-rgb), 0.5); }
+.rep-date-sep { color: var(--line-strong); font-size: 11px; }
+.rep-date-apply {
+  padding: 5px 14px; border-radius: var(--r-sm);
+  background: rgba(var(--tint-rgb), 0.1);
+  border: 1px solid rgba(var(--tint-rgb), 0.4);
+  color: var(--amber-bright);
+  font-family: var(--f-mono); font-size: 11px;
+  font-weight: 600; cursor: pointer; letter-spacing: 0.08em;
+  transition: all 0.15s;
+}
+.rep-date-apply:hover { background: var(--amber); color: var(--on-amber); }
+.rep-date-hint { margin-left: auto; font-family: var(--f-mono); font-size: 10px; color: var(--text-3); }
+
+/* Tab bar */
+.rep-tabbar {
+  display: flex; gap: 0;
+  border-bottom: 1px solid var(--line);
+  padding: 0 32px;
+  overflow-x: auto;
+}
+.rep-tab {
+  background: none; border: none;
+  padding: 10px 16px;
+  font-family: var(--f-mono); font-size: 11px;
+  font-weight: 600; letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-3); cursor: pointer;
+  border-bottom: 2px solid transparent; margin-bottom: -1px;
+  white-space: nowrap; transition: all 0.15s;
+}
+.rep-tab:hover { color: var(--text-1); }
+.rep-tab.active { color: var(--amber-bright); border-bottom-color: var(--amber-bright); }
+
+/* Export button */
+.rep-export-btn {
+  display: flex; align-items: center; gap: 6px;
+  padding: 6px 14px; border-radius: var(--r-sm);
+  border: 1px solid var(--line-strong);
+  background: var(--bg-3); cursor: pointer;
+  font-family: var(--f-mono); font-size: 11px;
+  font-weight: 600; letter-spacing: 0.08em;
+  color: var(--text-2); transition: all 0.15s;
+}
+.rep-export-btn:hover { border-color: rgba(var(--tint-rgb), 0.4); color: var(--amber-bright); }
+
+/* Chart toggle group (Hourly / Daily / Monthly) */
+.rep-toggle-group {
+  display: flex;
+  background: var(--bg-3);
+  border-radius: var(--r-sm);
+  padding: 2px; gap: 2px;
+}
+.rep-toggle-btn {
+  padding: 4px 10px; border-radius: 5px; border: none;
+  font-family: var(--f-mono); font-size: 10px;
+  font-weight: 600; letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-3); cursor: pointer;
+  background: none; transition: all 0.15s;
+}
+.rep-toggle-btn.active {
+  background: var(--bg-4); color: var(--amber-bright);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+/* Two-column layout: chart + payment */
+.rep-two-col {
+  display: grid;
+  grid-template-columns: 1fr 270px;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+@media (max-width: 1100px) { .rep-two-col { grid-template-columns: 1fr; } }
+
+/* Card header strip */
+.rep-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 16px 20px 12px;
+  border-bottom: 1px solid var(--line);
+}
+.rep-card-sub {
+  font-family: var(--f-mono); font-size: 10px;
+  color: var(--text-3); margin-top: 3px;
+  letter-spacing: 0.08em; text-transform: uppercase;
+}
+
+/* Payment list */
+.rep-payment-list { padding: 8px 20px 18px; display: flex; flex-direction: column; gap: 12px; }
+.rep-payment-row { display: flex; align-items: center; gap: 10px; }
+.rep-payment-icon {
+  width: 32px; height: 32px; border-radius: var(--r-sm);
+  display: grid; place-items: center; font-size: 14px; flex-shrink: 0;
+  background: var(--bg-3); border: 1px solid var(--line-strong);
+}
+.rep-payment-name { flex: 1; font-size: 13px; font-weight: 500; color: var(--text-1); }
+.rep-payment-pct { font-family: var(--f-mono); font-size: 10px; color: var(--text-3); }
+.rep-payment-amount { font-family: var(--f-mono); font-size: 12px; color: var(--amber-bright); }
+
+/* Rank badge */
+.rep-rank {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 28px; height: 18px;
+  border: 1px solid var(--line-strong); border-radius: var(--r-sm);
+  font-family: var(--f-mono); font-size: 9px; font-weight: 600;
+  color: var(--text-3);
+}
+.rep-rank.gold   { border-color: rgba(var(--tint-rgb), 0.5); color: var(--amber-bright); }
+.rep-rank.silver { border-color: rgba(200,200,200,0.4); color: var(--text-2); }
+.rep-rank.bronze { border-color: rgba(180,83,9,0.5); color: #d97706; }
+
+/* Progress bar for % of sales */
+.rep-pct-bar { display: flex; align-items: center; gap: 8px; }
+.rep-pct-track { flex: 1; height: 4px; background: var(--bg-3); border-radius: 2px; overflow: hidden; }
+.rep-pct-fill { height: 100%; background: var(--amber); border-radius: 2px; transition: width 0.3s; }
+.rep-pct-text { font-family: var(--f-mono); font-size: 10px; color: var(--text-3); white-space: nowrap; width: 38px; text-align: right; }
+
+/* Payment pill badges in transaction table */
+.rep-pay-pill {
+  display: inline-block;
+  font-family: var(--f-mono); font-size: 10px;
+  padding: 2px 6px; border-radius: 4px;
+  background: var(--bg-3);
+  border: 1px solid var(--line-strong);
+  color: var(--text-2);
+}

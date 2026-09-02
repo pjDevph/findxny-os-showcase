@@ -1,0 +1,93 @@
+name,sku,barcode,category,price,cost,purchase_unit,selling_unit,description,for_sale,kitchen_required,active,featured,featured_tag,is_ingredient
+Blueberry Frappe,,,Frappes,175,,pcs,cup,,TRUE,FALSE,TRUE,FALSE,,FALSE
+Caramel Frappe,,,Frappes,175,,pcs,cup,,TRUE,FALSE,TRUE,FALSE,,FALSE
+Caramel Toffee Frappe,,,Frappes,190,,pcs,cup,,TRUE,FALSE,TRUE,FALSE,,FALSE
+Chocolate Chip Frappe,,,Frappes,175,,pcs,cup,,TRUE,FALSE,TRUE,FALSE,,FALSE
+Cheesecake Frappe,,,Frappes,190,,pcs,cup,,TRUE,FALSE,TRUE,FALSE,,FALSE
+Coffee Jelly Frappe,,,Frappes,180,,pcs,cup,,TRUE,FALSE,TRUE,FALSE,,FALSE
+Cookies and Cream Frappe,,,Frappes,190,,pcs,cup,,TRUE,FALSE,TRUE,FALSE,,FALSE
+Dark Mocha Frappe,,,Frappes,190,,pcs,cup,,TRUE,FALSE,TRUE,FALSE,,FALSE
+Strawberry Frappe,,,Frappes,190,,pcs,cup,,TRUE,FALSE,TRUE,FALSE,,FALSE
+White Rabbit Frappe,,,Frappes,190,,pcs,cup,,TRUE,FALSE,TRUE,FALSE,,FALSE
+Mango Graham Frappe,,,Frappes,190,,pcs,cup,,TRUE,FALSE,TRUE,FALSE,,FALSE
+Java Chip Frappe,,,Frappes,190,,pcs,cup,,TRUE,FALSE,TRUE,FALSE,,FALSE
+Roasted Almond Latte,,,Lattes,180,,pcs,cup,,TRUE,FALSE,TRUE,FALSE,,FALSE
+Hazelnut Espresso Latte,,,Lattes,175,,pcs,cup,,TRUE,FALSE,TRUE,FALSE,,FALSE
+French Vanilla Espresso Latte,,,Lattes,175,,pcs,cup,,TRUE,FALSE,TRUE,FALSE,,FALSE
+Sea Salt Caramel Latte,,,Signature Drinks,220,,pcs,cup,A smooth blend of rich espresso and creamy milk topped with light sea salt foam. Iced or Hot.,TRUE,FALSE,TRUE,TRUE,House Special,FALSE
+Ginger Ale,,,Signature Drinks,160,,pcs,cup,Boiled ginger infused with natural sugar cane with a squeeze of fresh lemon.,TRUE,FALSE,TRUE,FALSE,,FALSE
+Honey Lemon Cucumber,,,Signature Drinks,160,,pcs,cup,"A refreshing mix of cucumber, lemon, and honey served over ice.",TRUE,FALSE,TRUE,FALSE,,FALSE
+Dalgona Coffee,,,Signature Drinks,170,,pcs,cup,A whipped coffee delight made with fluffy aerated coffee foam layered over cold or warm milk.,TRUE,FALSE,TRUE,FALSE,,FALSE
+Caramel Macchiato,,,Signature Drinks,200,,pcs,cup,A delightful blend of smooth espresso and steamed milk infused with sweet caramel.,TRUE,FALSE,TRUE,FALSE,,FALSE
+Dark Chocolate Milktea,,,Milktea,160,,pcs,cup,Recommended.,TRUE,FALSE,TRUE,FALSE,,FALSE
+Black Forest Milktea,,,Milktea,155,,pcs,cup,,TRUE,FALSE,TRUE,FALSE,,FALSE
+Wintermelon Milktea,,,Milktea,155,,pcs,cup,Must Try.,TRUE,FALSE,TRUE,FALSE,,FALSE
+Taro Milktea,,,Milktea,155,,pcs,cup,,TRUE,FALSE,TRUE,FALSE,,FALSE
+Okinawa Milktea,,,Milktea,155,,pcs,cup,,TRUE,FALSE,TRUE,FALSE,,FALSE
+Hot Caramel Macchiato,,,Hot Drinks,145,,pcs,cup,,TRUE,FALSE,TRUE,FALSE,,FALSE
+Hot Spanish Latte,,,Hot Drinks,125,,pcs,cup,,TRUE,FALSE,TRUE,FALSE,,FALSE
+Hot French Vanilla,,,Hot Drinks,165,,pcs,cup,,TRUE,FALSE,TRUE,FALSE,,FALSE
+Hot Chocolate,,,Hot Drinks,155,,pcs,cup,,TRUE,FALSE,TRUE,FALSE,,FALSE
+Hot Matcha,,,Hot Drinks,165,,pcs,cup,,TRUE,FALSE,TRUE,FALSE,,FALSE
+Oat Milk Add-on,,,Add-ons,45,,pcs,add-on,,TRUE,FALSE,TRUE,FALSE,,FALSE
+Non Dairy Add-on,,,Add-ons,30,,pcs,add-on,,TRUE,FALSE,TRUE,FALSE,,FALSE
+Soy Milk Add-on,,,Add-ons,30,,pcs,add-on,,TRUE,FALSE,TRUE,FALSE,,FALSE
+Blueberry Soda,,,Fruity Soda,150,,pcs,cup,,TRUE,FALSE,TRUE,FALSE,,FALSE
+Green Apple Soda,,,Fruity Soda,150,,pcs,cup,,TRUE,FALSE,TRUE,FALSE,,FALSE
+Passion Fruit Soda,,,Fruity Soda,150,,pcs,cup,,TRUE,FALSE,TRUE,FALSE,,FALSE
+Lychee Soda,,,Fruity Soda,150,,pcs,cup,,TRUE,FALSE,TRUE,FALSE,,FALSE
+Lemon Soda,,,Fruity Soda,150,,pcs,cup,,TRUE,FALSE,TRUE,FALSE,,FALSE
+Dirty Matcha,,,Matcha,190,,pcs,cup,,TRUE,FALSE,TRUE,FALSE,,FALSE
+Strawberry Matcha Frappe,,,Matcha,190,,pcs,cup,,TRUE,FALSE,TRUE,FALSE,,FALSE
+Matcha Milktea,,,Matcha,160,,pcs,cup,,TRUE,FALSE,TRUE,FALSE,,FALSE
+Oreo Matcha Latte,,,Matcha,170,,pcs,cup,,TRUE,FALSE,TRUE,FALSE,,FALSE
+Almuerzo Blend,,,City Blend,130,,pcs,cup,"A perfect blend of medium and dark roasted beans going off a jackfruit aroma — sweet and smooth, good for an after-meal cup.",TRUE,FALSE,TRUE,FALSE,,FALSE
+Barako Blend,,,City Blend,120,,pcs,cup,"The famous Batangas pride — strong, bitter and full-bodied taste with highest caffeine content — best for morning starters.",TRUE,FALSE,TRUE,FALSE,,FALSE
+Arabica Blend,,,City Blend,120,,pcs,cup,"Mountain Province's famous blend of Arabica and Robusta — smooth taste, sweet/winey aroma.",TRUE,FALSE,TRUE,FALSE,,FALSE
+Benguet Blend,,,City Blend,120,,pcs,cup,Medium roasted with nutty/caramelly flavored notes but with full caffeine strength.,TRUE,FALSE,TRUE,FALSE,,FALSE
+Kalinga Blend,,,City Blend,120,,pcs,cup,Combination of medium and dark roasted coffee giving a nutty flavored with a full-bodied taste of coffee.,TRUE,FALSE,TRUE,FALSE,,FALSE
+Espresso Blend,,,City Blend,130,,pcs,cup,Strongest coffee aroma with full bodied strength of an espresso shot — good for a coffee kick shot.,TRUE,FALSE,TRUE,FALSE,,FALSE
+Hazelnut Flavor Coffee,,,City Blend,130,,pcs,cup,Dark roast coffee infused with hazel nut flavoring and aroma.,TRUE,FALSE,TRUE,FALSE,,FALSE
+Turkish Cinnamon Coffee,,,City Blend,135,,pcs,cup,Medium roasted coffee with that hint of Mediterranean spice in it.,TRUE,FALSE,TRUE,FALSE,,FALSE
+Robusta Quezon Prov,,,Pure Origin,140,,pcs,cup,"30% of the world's coffee — highest caffeine content with sharp, full-bodied coffee taste. Bitter. Best choice for a morning kick.",TRUE,FALSE,TRUE,FALSE,,FALSE
+Liberica Indonesia,,,Pure Origin,150,,pcs,cup,"Only 1% of the world's coffee — gives a woody flavor, bitter strong aroma, smoky.",TRUE,FALSE,TRUE,FALSE,,FALSE
+Arabica Mt. Matutum,,,Pure Origin,160,,pcs,cup,"Lowest caffeine content — milder, smoother and mellower taste of coffee. Still with that warm chocolatey aroma.",TRUE,FALSE,TRUE,FALSE,,FALSE
+Excelsa Amadeo,,,Pure Origin,140,,pcs,cup,Only 7% of the world's coffee production. Rare complex taste with its richness in fruity aroma — similar to jackfruit with a slight winey aroma.,TRUE,FALSE,TRUE,FALSE,,FALSE
+Cajun Corn,,,Appetizers,,,pcs,serving,,TRUE,TRUE,TRUE,FALSE,,FALSE
+Sizzling Sisig,,,Appetizers,,,pcs,serving,,TRUE,TRUE,TRUE,FALSE,,FALSE
+Kilawin na Liempo,,,Appetizers,,,pcs,serving,,TRUE,TRUE,TRUE,FALSE,,FALSE
+Lumpiang Shanghai,,,Appetizers,,,pcs,serving,,TRUE,TRUE,TRUE,FALSE,,FALSE
+Beef Loaded Nachos,,,Appetizers,,,pcs,serving,,TRUE,TRUE,TRUE,FALSE,,FALSE
+Ensaladang Mangga,,,Appetizers,,,pcs,serving,,TRUE,TRUE,TRUE,FALSE,,FALSE
+Fried Calamari,,,Appetizers,,,pcs,serving,,TRUE,TRUE,TRUE,FALSE,,FALSE
+Cheesy Bacon Fries,,,Appetizers,,,pcs,serving,,TRUE,TRUE,TRUE,FALSE,,FALSE
+Dynamite,,,Appetizers,,,pcs,serving,,TRUE,TRUE,TRUE,FALSE,,FALSE
+Boneless Chicksilog,,,Breakfast / Silog,180,,pcs,plate,,TRUE,TRUE,TRUE,FALSE,,FALSE
+Tapsilog,,,Breakfast / Silog,190,,pcs,plate,,TRUE,TRUE,TRUE,FALSE,,FALSE
+Lechon Silog,,,Breakfast / Silog,190,,pcs,plate,,TRUE,TRUE,TRUE,FALSE,,FALSE
+Bangsilog,,,Breakfast / Silog,210,,pcs,plate,,TRUE,TRUE,TRUE,FALSE,,FALSE
+Hungarian Silog,,,Breakfast / Silog,180,,pcs,plate,,TRUE,TRUE,TRUE,FALSE,,FALSE
+Pinyadobo,,,Main Course,,,pcs,serving,New signature dish.,TRUE,TRUE,TRUE,FALSE,,FALSE
+Crispy Pork Binagoongan,,,Main Course,,,pcs,serving,,TRUE,TRUE,TRUE,FALSE,,FALSE
+Gising Gising,,,Main Course,,,pcs,serving,,TRUE,TRUE,TRUE,FALSE,,FALSE
+Beef Caldereta,,,Main Course,,,pcs,serving,,TRUE,TRUE,TRUE,FALSE,,FALSE
+Crispy Kare Kare,,,Main Course,,,pcs,serving,,TRUE,TRUE,TRUE,FALSE,,FALSE
+Bangus Ala Pobre,,,Main Course,,,pcs,serving,,TRUE,TRUE,TRUE,FALSE,,FALSE
+Crispy Pata,,,Main Course,,,pcs,serving,,TRUE,TRUE,TRUE,FALSE,,FALSE
+Pancit Canton,,,Pancit,250,,pcs,serving,,TRUE,TRUE,TRUE,FALSE,,FALSE
+Pancit Bihon,,,Pancit,250,,pcs,serving,,TRUE,TRUE,TRUE,FALSE,,FALSE
+Mixed Pancit,,,Pancit,300,,pcs,serving,,TRUE,TRUE,TRUE,FALSE,,FALSE
+Margherita Pizza,,,Pizza,,,pcs,serving,,TRUE,TRUE,TRUE,FALSE,,FALSE
+Pizza Supreme,,,Pizza,,,pcs,serving,,TRUE,TRUE,TRUE,FALSE,,FALSE
+Quattro Formaggi Pizza,,,Pizza,,,pcs,serving,,TRUE,TRUE,TRUE,FALSE,,FALSE
+Pepperoni Pizza,,,Pizza,,,pcs,serving,,TRUE,TRUE,TRUE,FALSE,,FALSE
+Hawaiian Pizza,,,Pizza,,,pcs,serving,,TRUE,TRUE,TRUE,FALSE,,FALSE
+Pork Barbecue,,,Smoke & Grill,,,pcs,serving,,TRUE,TRUE,TRUE,FALSE,,FALSE
+Honey Salmon Steak,,,Smoke & Grill,,,pcs,serving,Grilled salmon with a sweet honey glaze and herb finish.,TRUE,TRUE,TRUE,FALSE,,FALSE
+Grilled Squid,,,Smoke & Grill,,,pcs,serving,,TRUE,TRUE,TRUE,FALSE,,FALSE
+Mashed Potatoes,,,Smoke & Grill,,,pcs,serving,Creamy mashed potatoes infused with a hint of truffle oil.,TRUE,TRUE,TRUE,FALSE,,FALSE
+Prime Beef Ribs,,,Smoke & Grill,,,pcs,serving,"Tender, fall-off-the-bone beef ribs smoked with signature herbs.",TRUE,TRUE,TRUE,FALSE,,FALSE
+Chicken Barbecue,,,Smoke & Grill,,,pcs,serving,,TRUE,TRUE,TRUE,FALSE,,FALSE
+Sinigang na Baboy,,,Soup,,,pcs,serving,"A comforting Filipino pork soup with a savory-tangy tamarind broth, loaded with tender pork and fresh vegetables.",TRUE,TRUE,TRUE,FALSE,,FALSE
+Beef Bulalo,,,Soup,,,pcs,serving,"A rich and hearty Filipino beef shank soup slow-cooked until the meat is fall-off-the-bone tender, served in a flavorful bone marrow broth.",TRUE,TRUE,TRUE,FALSE,,FALSE
+Chicken Binakol,,,Soup,,,pcs,serving,"A traditional Filipino chicken soup cooked in coconut water with ginger and young coconut, giving it a light, naturally sweet, and aromatic flavor.",TRUE,TRUE,TRUE,FALSE,,FALSE

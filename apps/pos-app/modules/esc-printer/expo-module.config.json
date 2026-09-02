@@ -1,0 +1,6 @@
+{
+  "platforms": ["android"],
+  "android": {
+    "modules": ["com.findxny426.escprinter.EscPrinterModule"]
+  }
+}

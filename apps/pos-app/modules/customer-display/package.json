@@ -1,0 +1,7 @@
+{
+  "name": "customer-display",
+  "version": "0.0.1",
+  "description": "Customer-facing second-screen display native module",
+  "main": "index.ts",
+  "private": true
+}

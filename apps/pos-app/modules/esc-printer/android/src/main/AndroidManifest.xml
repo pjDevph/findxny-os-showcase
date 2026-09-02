@@ -1,0 +1,11 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+  <!-- Declare USB host feature as optional so the app installs on non-USB devices -->
+  <uses-feature android:name="android.hardware.usb.host" android:required="false" />
+
+  <!-- Bluetooth label/receipt printers: BluetoothAdapter.getBondedDevices() and
+       device.connect() need BLUETOOTH pre-API 31, BLUETOOTH_CONNECT on API 31+.
+       No discovery is performed (bonded/paired devices only), so no scan permission. -->
+  <uses-permission android:name="android.permission.BLUETOOTH" android:maxSdkVersion="30" />
+  <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" android:maxSdkVersion="30" />
+  <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+</manifest>
